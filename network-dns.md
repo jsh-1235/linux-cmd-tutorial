@@ -28,7 +28,6 @@
 
 ## DNS
 
-- 939998
 - nslookup pm2.bt-product-app.link
 - nameserver 172.24.160.1
 

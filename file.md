@@ -21,6 +21,7 @@
 - cat filename
 - cat -n index.html
 - more filename
+- less filename
 - head filename
 - head -n filename
 - tail filename
