@@ -4,14 +4,52 @@
 
 - apt update
 - apt install apache2
-- apt update
-- apt install apache2
 
-## Command
+## Directory List
+
+- /etc/apache2/apache2.conf – The main Apache global configuration file, that includes all other configuration files.
+- /etc/apache2/conf-available – stores available configurations.
+- /etc/apache2/conf-enabled – contains enabled configurations.
+- /etc/apache2/mods-available – contains available modules.
+- /etc/apache2/mods-enabled – contains enabled modules.
+- /etc/apache2/sites-available – contains configuration file for available sites (virtual hosts).
+- /etc/apache2/sites-enabled – contains configuration file for enabled sites (virtual hosts).
+- /etc/apache2/ports.conf
+
+## Virtual Hosting
+
+- 단일 서버에서 둘 이상의 웹 사이트 및 응용프로그램을 운영하는 방식
+- ls -l /var/www/html/
+- cd /var/www/html
+- vi index.html
+
+## Edit
+
+- $APACHE_RUN_DIR
+
+## Control
 
 - apache2 -v
 - sudo service apache2 start
 - sudo service apache2 stop
+- sudo service apache2 status
+- sudo systemctl status apache2
+- cat /var/log/apache2/access.log
+- tail -f access.log
+- tail -f other_vhosts_access.log
+
+## Firewall (UFW)
+
+- ufw - program for managing a netfilter firewall
+- sudo ufw enable
+- sudo ufw disable
+- sudo ufw allow 'Apache Full'
+- sudo ufw allow http : sudo ufw allow 80/tcp
+- sudo ufw allow https : sudo ufw allow 443/tcp
+- sudo ufw reload
+- sudo ufw status
+- <http://172.23.209.60:4000/>
+- <http://localhost:4000/>
 
 ## Monitoring
 
@@ -24,6 +62,9 @@
 - ip addr             // private ip
 - curl ipinfo.io/ip   // public ip
 - elinks ipinfo.io
+- curl ifconfig.co
+- curl ifconfig.me
+- curl icanhazip.com
 
 ## netstat (Port)
 
@@ -49,3 +90,37 @@
 
 - nc -zv localhost 80
 - nc -zv daum.net 80
+
+## gateway
+
+- ip route
+- default via 172.23.208.1 dev eth0
+
+## Bitnami WAMP Stack
+
+- Root 경로 변경
+  - C:\Bitnami\wampstack-7.4.11-0\apache2\conf\bitnami\bitnami.conf
+
+  ```xml
+    <VirtualHost _default_:3456>
+      DocumentRoot "C:/Products/Software Devlopment/New Web/Client Side/React/Study/react-firebase-app/build"
+      <Directory "C:/Products/Software Devlopment/New Web/Client Side/React/Study/react-firebase-app/build">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        <IfVersion < 2.3 >
+          Order allow,deny
+          Allow from all
+        </IfVersion>
+        <IfVersion >= 2.3 >
+          Require all granted
+        </IfVersion>
+      </Directory>
+    </VirtualHost>
+  ```
+
+- Port 변경
+  - C:\Bitnami\wampstack-7.4.11-0\apache2\conf\httpd.conf
+
+  ```xml
+    Listen 3456
+  ```

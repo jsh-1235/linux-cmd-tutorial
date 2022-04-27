@@ -17,6 +17,10 @@
 
 - id - print real and effective user and group IDs
 
+## root user
+
+- passwd (비밀번호 재설정)
+
 ## su (Super User or Root User)
 
 - su - run a command with substitute user and group ID
@@ -42,6 +46,7 @@
 - useradd manager -d /home/manager_dir
 - passwd manager
 - su - manager
+- su --login manager
 - sudo pwd
 - logout (exit)
 
