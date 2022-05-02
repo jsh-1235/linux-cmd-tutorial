@@ -35,8 +35,8 @@
 - sudo service apache2 status
 - sudo systemctl status apache2
 - cat /var/log/apache2/access.log
-- tail -f access.log
-- tail -f other_vhosts_access.log
+- tail -f /var/log/apache2/access.log
+- tail -f /var/log/apache2/other_vhosts_access.log
 
 ## Firewall (UFW)
 
@@ -60,6 +60,7 @@
 ## IP
 
 - ip addr             // private ip
+- hostname -I
 - curl ipinfo.io/ip   // public ip
 - elinks ipinfo.io
 - curl ifconfig.co
@@ -124,3 +125,13 @@
   ```xml
     Listen 3456
   ```
+
+## rsync
+
+- cd /mnt/c/Products/"Software Devlopment"/Web/DevOps/Linux/Study/linux-apache2
+
+- sudo rsync -ahrvz --delete --progress /mnt/c/Products/"Software Devlopment"/Web/DevOps/Linux/Study/linux-apache2/ -e "ssh -i aws-bt-key.pem" ubuntu@ec2-52-78-209-69.ap-northeast-2.compute.amazonaws.com:~/linux-apache2/
+
+- sudo rsync -ahrvz --delete --progress /mnt/c/Products/"Software Devlopment"/Web/DevOps/Linux/Study/linux-apache2/ -e "ssh -i aws-bt-key.pem" ubuntu@ec2-52-78-209-69.ap-northeast-2.compute.amazonaws.com:/var/www/html
+
+- sudo rsync -ahrvz --delete --progress --rsync-path="sudo rsync" /mnt/c/Products/"Software Devlopment"/Web/DevOps/Linux/Study/linux-apache2/ -e "ssh -i aws-bt-key.pem" ubuntu@ec2-52-78-209-69.ap-northeast-2.compute.amazonaws.com:/var/www/html

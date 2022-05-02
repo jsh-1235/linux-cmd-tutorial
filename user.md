@@ -57,6 +57,8 @@
 ## Changing file permissions and attributes
 
 - chmod 777 filename
+- chmod u+r filename
+- chmod u-r filename
 - rwx:rwx:rwx [User/Grop/Others] => [u/g/o]
 - rwx [Read/Write/Execute]
 

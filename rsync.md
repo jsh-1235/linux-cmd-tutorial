@@ -8,8 +8,3 @@
 - ls -al dest
 - chmod -R 777 rsync
 - rsync -azP ~/rsync/src/ jsh@192.168.0.72:~/rsync/dest
-
-- ssh-keygen
-- cd ~
-- cd .ssh
-- ssh-copy-id jsh@192.168.0.72
