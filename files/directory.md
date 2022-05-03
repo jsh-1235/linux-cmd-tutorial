@@ -1,31 +1,27 @@
 # Directory
 
-## mkdir
+## mkdir (make directories)
 
-- mkdir - make directories
 - mkdir backup
 - mkdir -p a/b/c
 
-## rmdir
+## rmdir (remove empty directories)
 
-- rmdir - remove empty directories
 - rmdir backup
 
-## rm
+## rm (remove files or directories)
 
-- rm - remove files or directories
 - rm -r backup
-- rmdir -v *
+- rm -ri backup (prompt before every removal)
+- rmdir -v * (output a diagnostic for every directory processed)
 
-## mv
+## mv (move (rename) files)
 
-- mv - move (rename) files
-- mv backup bk (rename)
+- mv backup backup2 (rename)
 
-## cp
+## cp (copy files and directories)
 
-- cp - copy files and directories
-- cp -r backup backup2
+- cp -r backup backup2 (copy directories recursively)
 
 ## Structure
 

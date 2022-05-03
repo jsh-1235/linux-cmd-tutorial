@@ -11,6 +11,9 @@
 ## change user
 
 - su
+- su -
+- su - root
+- su - jsh
 
 ## user list
 

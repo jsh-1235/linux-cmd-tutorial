@@ -1,17 +1,16 @@
 # Process
 
-## ps
+## ps (report a snapshot of the current processes.)
 
-- report a snapshot of the current processes.
 - ps
 - ps -aux (To see every process on the system using BSD syntax)
 - ps aux | grep vim
 
 ## top
 
-- top
+- top (display Linux processes)
 
-## htop
+## htop (interactive process viewer)
 
 - htop
 

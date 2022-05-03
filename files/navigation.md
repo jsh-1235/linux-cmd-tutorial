@@ -18,9 +18,14 @@
 - ls
 - ls -l
 - ls -al
-- ls -alh
-- ls -alS
-- ls -alX
+- ls -ld ( list directories themselves, not their contents)
+- ls -alh (with -l and -s, print sizes like 1K 234M 2G etc.)
+- ls -alS (sort by file size, largest first)
+- ls -alX ( sort alphabetically by entry extension)
 - ls -al *.html
-- ls -ld index.html
 - ls -l | grep "^d" (only directory)
+
+## tree (list contents of directories in a tree-like format.)
+
+- tree
+- tree -p

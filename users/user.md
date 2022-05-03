@@ -1,8 +1,8 @@
 # User
 
-## w
+## w (Show who is logged on and what they are doing.)
 
-- w - Show who is logged on and what they are doing.
+- w
 
 ## who
 
@@ -13,7 +13,7 @@
 - whoami - print effective userid
 - Print the user name associated with the current effective user ID.  Same as id -un.
 
-## id
+## id (print real and effective user and group IDs)
 
 - id - print real and effective user and group IDs
 

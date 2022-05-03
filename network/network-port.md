@@ -19,8 +19,9 @@
 
 - nmap localhost
 - nmap -PN localhost -p80 | grep ^80
-- nmap -PN localhost -p81 | grep ^81
+- nmap -PN localhost -p22 | grep ^22
 - nmap -PN daum.net -p80 | grep ^80
+- nmap -PN daum.net -p22 | grep ^22
 
 ## nc (Remote port check)
 

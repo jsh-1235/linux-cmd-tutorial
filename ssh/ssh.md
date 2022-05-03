@@ -1,7 +1,10 @@
-# SSH
+# ssh (secure shell)
 
 - sudo apt purge openssh-server openssh-client
 - sudo apt install openssh-server openssh-client
+
+## Operation
+
 - sudo service ssh start
 - sudo service ssh stop
 - ps -aux | grep ssh
@@ -14,8 +17,8 @@
 - cd ~
 - cd .ssh
 - cat id_rsa.pub
-- ssh-copy-id ec2-52-78-209-69.ap-northeast-2.compute.amazonaws.com
 - ssh-copy-id jsh@192.168.0.72
+- ssh jsh@192.168.0.72 (No login required)
 
 ## AWS
 
