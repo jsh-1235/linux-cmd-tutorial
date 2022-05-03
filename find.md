@@ -8,8 +8,9 @@
 - which  returns  the pathnames of the files (or links) which would be executed in the current environment.
 - which --help
 - which ls
+- which -a ls
 
-## whereis
+## whereis (locate the binary, source, and manual page files for a command)
 
 - Locate the binary, source, and manual-page files for a command.
 - whereis --help
