@@ -11,3 +11,10 @@
 - cat > test.txt
 - cat >> test.txt (append)
 - ctrl + d (complete)
+
+## tar (reverse lines characterwise)
+
+- tar -cvf a.tar a (압축 하기)
+- tar -xvf a.tar (압축 풀기)
+- tar -zcvf a.tar.gz a
+- tar -zxvf a.tar.gz

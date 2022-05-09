@@ -1,14 +1,11 @@
 # Environment
 
 - env
-- set
-- set | grep score
-- unset score
-
-## echo
-
-- echo $PATH
-- $PATH
+- export NAME=seunghun.jeong
+- env | grep NAME
+- echo $NAME
+- unset NAME
+- vi /etc/bash.bashrc (환경변수 영구 저장)
 
 ## Variable
 
@@ -16,3 +13,8 @@
 - echo $score
 - set | grep score
 - unset score
+
+## echo
+
+- echo $PATH
+

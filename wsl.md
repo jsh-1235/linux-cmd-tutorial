@@ -7,14 +7,13 @@
 
 ## Execution
 
-- Ctr + R
+- windows key + r
 - ws
 - wsl -l -v
 - ubuntu2004.exe
-- sudo ssh -i "aws-bt-key.pem" ubuntu@ec2-52-78-209-69.ap-northeast-2.compute.amazonaws.com
 
-## rsync
+## Linux File Position
 
-- sudo rsync -avz ~/projects/ -e "ssh -i aws-bt-key.pem" ubuntu@ec2-52-78-209-69.ap-northeast-2.compute.amazonaws.com:~/projects
-
-- sudo rsync -ahrvz --delete --progress ~/projects/ -e "ssh -i aws-bt-key.pem" ubuntu@ec2-52-78-209-69.ap-northeast-2.compute.amazonaws.com:~/projects
+- windows key + r
+- \\wsl$\Ubuntu-20.04
+- explorer.exe .

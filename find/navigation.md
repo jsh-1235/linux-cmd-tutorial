@@ -12,6 +12,8 @@
 - cd - (Previous directory)
 - cd $TEMP (Change current directory to the directory defined by the environment variable "TEMP".)
 - !!
+- pushd /etc
+- popd
 
 ## List
 
@@ -29,3 +31,8 @@
 
 - tree
 - tree -p
+
+## ln (make links between files)
+
+- ln -s [original file path] [symbolic file path]
+- rm link_test

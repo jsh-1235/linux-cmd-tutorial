@@ -14,8 +14,14 @@
 
 - htop
 
+## kill (send a signal to a process)
+
+- kill -9 %1
+
 ## Multi Task
 
+- ls -alR / > result.txt 2> error.log
+- ls -alR / > result.txt 2> error.log &
 - ctrl + z (change background)
 - jobs
 - fg (Move job to the foreground.)
@@ -23,5 +29,9 @@
 - kill %1
 - kill -9 %1
 
-- ls -alR / > result.txt 2> error.log
-- ls -alR / > result.txt 2> error.log &
+## sleep (delay for a specified amount of time)
+
+- sleep 1s
+- sleep 1m
+- sleep 1s
+- sleep 5; pwd;

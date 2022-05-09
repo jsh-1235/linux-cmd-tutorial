@@ -7,10 +7,22 @@
 - Korn Shell (ksh)
 - Bourne-again Shell (bash) : GNU Project (csh, ksh 기능 포함)
 
+## find shells
+
+- cat /etc/shells (List of currently available shells)
+- eche $SHELL (Current Shell)
+
+## chsh (change login shell)
+
+- sudo chsh jsh
+- /bin/sh
+- sudo grep jsh /etc/passwd
+- jsh:x:1000:1000:,,,:/home/jsh:/bin/sh
+
 ## Shell Variable
 
 - 변수명 : 문자, 숫자, _
-- score=100
+- score=100 (Be careful with spacing)
 - set
 - echo $score
 - set | grep score
@@ -20,18 +32,23 @@
 
 - 구동되는 프로그램에게 영향을 주는 변수
 - 대문자로 작성
+- printenv
 - env
 - echo $HOME
 - echo $USER
 - echo $SHELL
 - echo $PATH
-- export NAME=seunghun.jeong
-- echo $NAME
-- env | grep NAME
+- export FNAME=seunghun.jeong
+- echo $FNAME
+- env | grep FNAME
 
 ## Meta Characters
 
 - \ ? () $ ... * % {} []
+- touch file{1..5}
+- echo *
+- echo f*
+- echo file?
 
 ## Quoting Rule (메타문자의 의미를 제거하고 단순 문자로 변경)
 
@@ -47,7 +64,7 @@
 
 ## Nesting Command
 
-- echo "today is $(date)"
+- echo "Today is $(date)"
 - date +%Y%m%d
 - echo "today is $(date +%Y%m%d)"
 - touch report-$(date +%Y%m%d)_v1
@@ -56,11 +73,14 @@
 ## Alias
 
 - Shell의 명령에 새로운 이름을 부여
-- 명령들을 조합하여 새로운 이름을 부영
-- alias name="command"
+- 명령들을 조합하여 새로운 이름을 부여
 - alias or alias name
-- unalias name
+- alias name="command"
 - alias rm="rm -i"
+- unalias name
+- vi ~/.bashrc (설정 저장)
+  - alias c=clear
+  - alias h=history
 
 ## Shell Prompt
 
@@ -72,7 +92,5 @@
 - \t : 현재 시간
 - \$ : $ or # (Prompt 모양)
 - echo $PS1
-- vi .bashrc (설정 저아)
+- vi ~/.bashrc (설정 저장)
   - PS1='\u@\h:\W\$ '
-  - alias c=clear
-  - alias h=history
