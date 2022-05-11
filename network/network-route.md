@@ -27,9 +27,3 @@
 - route (Kernel IP routing table)
 - route add default gw 172.26.16.1
 - route add -net 172.26.31.58/20 netmask 255.255.240.0 dev eth0
-
-## ip
-
-- ip route
-- default via 172.26.16.1 dev eth0
-- ip route add default via 172.26.16.1 dev eth0

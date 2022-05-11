@@ -10,6 +10,11 @@
 - iwconfig
 - sudo lshw -c network
 
+## ip
+
+- ip -s link
+- ip -r link
+
 ## gateway
 
 - ip route

@@ -39,6 +39,3 @@
 
 - ifconfig
 - inet 172.26.31.58  netmask 255.255.240.0  broadcast 172.26.31.255
-
-
-
