@@ -1,20 +1,26 @@
 # File System
 
-## uname (print system information)
+- ls -lF /dev
+- Partition (GUID / MBR)
+- ls -lF /dev/sd*
+- sda (sd: SCSI, a: First Disk)
+- sdb (sd: SCSI, a: Second Disk)
 
-- uname
-- uname -a
-- uname -snrvmpio
+## mount
 
+- mount
+- mount | grep "C:"
 
 ## df (report file system disk space usage)
 
-- df
+- 각 파일 시스템 디스크 사용량을 표시한다.
+- df [-ahHt]
 - df -a
 
 ## du (estimate file space usage)
 
-- du
+- 현재 디렉토리 이하 디스크 사용량을 표시한다.
+- du [-abhsd]
 - du -ab
 - du -ah
 - du /etc | sort -n | tail -n 5

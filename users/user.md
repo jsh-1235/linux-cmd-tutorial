@@ -3,6 +3,7 @@
 ## w (Show who is logged on and what they are doing.)
 
 - w
+- w [-hfs]
 
 ## who (show who is logged on)
 
@@ -16,17 +17,22 @@
 ## id (print real and effective user and group IDs)
 
 - id
-- id manager
+- id [-Ggun] manager
 - id -u manager
 - id -gn manager
 
 ## su (run a command with substitute user and group ID)
 
-- su - manager
+- su root
+- su - root (사용자의 환경 변수를 이어 받지 않는다. 새롭게 로그인한 것과 동일하다.)
 
 ## sudo (execute a command as another user)
 
+- sudo -l (현재 사용자에게 허가된 권한 목록을 표시한다.)
 - sudo rm -r root
+- sudo -u jsh touch ~jsh/test.txt (인증을 한번 해두면 한동안 암호를 입력하지 않아도 sudo 명령어를 사용할 수 있다.)
+- sudo -u root rm root-file
+- sudo -u jsh rm jsh-file
 
 ## passwd (change user password)
 
@@ -38,28 +44,9 @@
 - sudo usermod -aG sudo manager (add sudoers)
 - usermod -u 1001 manager
 
-## groups (print the groups a user is in)
+## user, group, permission
 
-- groups manager
-
-## groupadd (create a new group)
-
-- groupadd bt
-- echo $?
-- tail /ect/group
-
-## groupdel (delete a group)
-
-- groupdel bt
-- echo $?
-- tail /ect/group
-
-## gpasswd (administer /etc/group and /etc/gshadow)
-
-- gpasswd -a manager jsh (add)
-- gpasswd -d manager jsh (delete)
-- groups manager (manager jsh)
-
-## groupmod (modify a group definition on the system)
-
-- groupmod -n group-2 group-1
+- OS는 사용자를 고유한 User ID로 관리한다.
+- 사용자는 반드시 하나의 그룹에 속해야 하며, 사용자가 주로 속하는 그룹을 Primary Group 이라고 한다.
+- 그룹도 Group ID라는 번호를 할당받아서 관리된다.
+- 리눅스는 파일이나 디렉토리마다 일기 권한, 쓰기 권한, 실행 권한을 설정한다.

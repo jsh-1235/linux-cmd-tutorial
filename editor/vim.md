@@ -83,7 +83,7 @@
 - D
 - dH dL
 
-## undo & redu
+## undo & redo
 
 - u
 - ctrl + r

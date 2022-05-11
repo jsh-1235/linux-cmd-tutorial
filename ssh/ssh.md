@@ -18,7 +18,9 @@
 - cd .ssh
 - cat id_rsa.pub
 - ssh-copy-id jsh@192.168.0.72
-- ssh jsh@192.168.0.72 (No login required)
+- ssh jsh@192.168.0.72 (No login required) (ssh client)
+- ssh -l jsh 192.168.0.72
+- sudo service ssh start (ssh server)
 
 ## AWS
 
@@ -26,6 +28,8 @@
 - cd /mnt/c/Products/"Software Devlopment"/Web/DevOps/AWS/Setup/Keys
 - cp aws-bt-key.pem ~/
 - sudo ssh -i "aws-bt-key.pem" ubuntu@ec2-15-164-80-55.ap-northeast-2.compute.amazonaws.com
+- sudo ssh -i "aws-bt-key.pem" ubuntu@ec2-15-164-80-55.ap-northeast-2.compute.amazonaws.com ls
+- exit
 
 ## rsync
 

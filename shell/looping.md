@@ -34,10 +34,48 @@
 - bit 연산 (<<, >>)
 - 단항 연산 (++. +=, --, -=)
 
+## bc (An arbitrary precision calculator language)
+
+- bc
+- scale=5
+- (1+1)*5/3
+- 3.33333
+- quit
+
+```bash
+#!/bin/bash
+# bc
+
+pi=3.14
+r=$1
+echo $r '*' $r '*' $pi = `echo "$r * $r * $pi" | bc`
+```
+
+## getopts (Parse option arguments.)
+
+```bash
+#!/bin/bash
+
+FLAG=0
+while getopts ab: OPT
+do
+  case $OPT in
+    a) FLAG=1 ;;
+    b) VALUE=$OPTARG ;;
+  esac
+done
+shift `expr $OPTIND - 1`
+
+echo FLAG: $FLAG
+echo VALUE: $VALUE
+echo '$1: ' $1
+```
+
 ## while loop
 
 ```bash
-# !/bin/bash
+#!/bin/bash
+
 num=1
 while test $num -le 5
 do
@@ -49,7 +87,8 @@ done
 ## until loop
 
 ```bash
-# !/bin/bash
+#!/bin/bash
+
 num=1
 until test $num -gt 5
 do
@@ -59,8 +98,9 @@ done
 ```
 
 ```bash
-# !/bin/bash
+#!/bin/bash
 # Description: Create as user account
+
 echo -n "New username: "
 read username
 while getent passwd $username &> /dev/null
@@ -76,8 +116,9 @@ sudo useradd -m -s /bin/bash $username
 ```
 
 ```bash
-# !/bin/bash
+#!/bin/bash
 # Description: Delete user account
+
 echo -n "username to remove: "
 read username
 until getent passwd $username &> /dev/null
@@ -90,7 +131,8 @@ sudo userdel -r $username
 ```
 
 ```bash
-# !/bin/bash
+#!/bin/bash
+
 num=0
 while [ $num -lt 5 ]
 do
@@ -99,5 +141,55 @@ do
   if [[ "$num" == '2' ]]; then
     break
   fi
+done
+```
+
+```bash
+#!/bin/bash
+
+i=0
+
+until [ ! $i -lt 5 ]
+do
+  echo $i
+  i=`expr $i + 1`
+done
+```
+
+```bash
+#!/bin/bash
+
+for var in 0 1 2 3 4
+do
+  echo $var
+done
+```
+
+```bash
+#!/bin/bash
+
+num=1
+while [ $num -le 5 ]
+do
+  echo num is $num
+  num=`expr $num + 1`
+done
+```
+
+```bash
+#!/bin/bash
+# infinite loop
+
+num=1
+while :
+do
+  echo num is $num
+
+  if [ $num -ge 10 ]
+  then
+    break
+  fi
+
+  num=`expr $num + 1`
 done
 ```

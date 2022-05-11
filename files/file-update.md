@@ -1,16 +1,17 @@
 # File Update
 
-## Move an Rename
+## mv (move (rename) files)
 
-- mv [−if] source_file target_file
+- mv [−ifvbu] source_file target_file
 - mv [−if] a.txt b.txt (rename)
 
-## Copy
+## cp (copy files and directories)
 
-- cp [−Pfip] source_file target_file
+- cp [−ifrdpvau] source_file target_file
+- cp -r source_file target_file (디렉토리를 통째로 복사한다.)
 
-## Remove
+## Remove (remove files or directories)
 
-- rm file name (...)
+- rm [-if] file (...)
 - rm -rf * (Deletes all files and directories belonging to the current directory)
 - rm -f file{1..3}

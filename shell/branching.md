@@ -40,6 +40,7 @@
 
 ```bash
 #!/bin/bash
+
 echo $0
 x=$1
 if test $x -gt $2
@@ -53,6 +54,7 @@ echo
 
 ```bash
 #!/bin/bash
+
 echo $0
 x=$1
 if [ $x -gt $2 ]
@@ -66,6 +68,7 @@ echo
 
 ```bash
 #!/bin/bash
+
 echo -n "input numbers "
 read x y
 if [ $x -gt $y ]
@@ -79,6 +82,7 @@ echo
 
 ```bash
 # !/bin/bash
+
 echo -n "input numbers "
 read x y
 if [ $x -eq $y ]
@@ -97,6 +101,7 @@ echo
 
 ```bash
 # !/bin/bash
+
 if test -e /etc/passwd
 then
   ls -l /etc/passwd
@@ -107,6 +112,7 @@ fi
 
 ```bash
 # !/bin/bash
+
 echo -n "What do you want?"
 read answer
 case $answer in
@@ -118,6 +124,7 @@ esac
 
 ```bash
 # !/bin/bash
+
 echo -n "What do you want?"
 read answer
 case $answer in
@@ -129,6 +136,7 @@ esac
 
 ```bash
 # !/bin/bash
+
 cat << END
 =================================
 Please select a number
@@ -151,6 +159,7 @@ exit 0
 
 ```bash
 # !/bin/bash
+
 echo -n "Input a directory name: "
 read dirname
 if test -d $dirname
@@ -159,4 +168,28 @@ then
 else
   echo "/etc/passwd file does not exist!"
 fi
+```
+
+```bash
+# !/bin/bash
+
+a=20
+b=30
+
+if [ $a -gt $b ]
+then
+  echo "a > b"
+else
+  echo "a <= b"
+fi
+```
+
+```bash
+#!/bin/bash
+
+if ! [ -d bak ]; then
+  mkdir bak
+fi
+
+cp *.log bak
 ```

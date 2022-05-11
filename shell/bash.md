@@ -77,7 +77,9 @@
 - alias or alias name
 - alias name="command"
 - alias rm="rm -i"
+- alias rm
 - unalias name
+- unalias -a (설정된 모든 단축어 해제)
 - vi ~/.bashrc (설정 저장)
   - alias c=clear
   - alias h=history

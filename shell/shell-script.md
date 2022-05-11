@@ -18,6 +18,11 @@
 - exit
 - pwd (/home/jsh)
 
+## bash
+
+- echo $0 (current shell)
+- ls /bin | grep bash
+
 ## sample
 
 - vi test.sh
@@ -75,9 +80,31 @@ echo "=========================================="
 ```
 
 ```bash
-# !/bin/bash
+#!/bin/bash
 
 echo "Hello"
 sleep 5
 echo "Bye"
+```
+
+```bash
+#!/bin/bash
+
+read NAME
+echo -e "Hello\n$NAME!"
+```
+
+```bash
+#!/bin/bash
+
+h="Hello"
+w="World"
+echo "${h}, ${w}"
+```
+
+```bash
+#!/bin/bash
+
+read name
+echo "Hello, $name!"
 ```

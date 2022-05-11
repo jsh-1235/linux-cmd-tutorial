@@ -1,34 +1,6 @@
 
 # Utility
 
-## History
-
-- history
-- history 5
-- !444
-- history -c (delete all)
-- history -d 1
-- history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head -10
-
-## help
-
-- ls --help
-
-## man (an interface to the system reference manuals)
-
-- man ls
-- man ls | grep 'sort'
-- man ls | grep 'sort' | grep 'file'
-- /search (navigation => n : forward, b: backward)
-
-## date (print or set the system date and time)
-
-- date
-
-## cal (displays a calendar and the date of Easter)
-
-- cal
-
 ## fortune (print a random, hopefully interesting, adage)
 
 - fortune

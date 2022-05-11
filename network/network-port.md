@@ -1,6 +1,16 @@
 
 # Port
 
+## ss (another utility to investigate sockets)
+
+- ss [-salntux]
+- ss -a
+- ss -s (각 프로토콜의 통계 정보 표시)
+- ss -t (tcp)
+- ss -u (utp)
+- ss -x (UNIX 도메인 소켓 정보 표시)
+- ss | grep tcp
+
 ## netstat (Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships)
 
 - netstat
@@ -27,3 +37,15 @@
 
 - nc -zv localhost 80
 - nc -zv daum.net 80
+- nc -zv 15.164.80.55 22
+
+## tcpdump (dump traffic on a network)
+
+- 네트워크 인터페이스에서 트랙픽 데이터 취득하기
+- tcpdump
+- sudo tcpdump port http
+- sudo tcpdump -w tcpdump.log port http
+- sudo tcpdump port http and src host www.example.com
+- sudo tcpdump -w tcpdump.log (Write)
+- sudo tcpdump -r tcpdump.log (Read)
+- ctrl + c

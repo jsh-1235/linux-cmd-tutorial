@@ -1,7 +1,9 @@
 # Wildcard
 
-- ? : Matches any single character
-- * : Matches anything (any number of characters)
+- ? : Matches any single character (Question)
+- * (Asterisk) : Matches anything (any number of characters)
+- ^ (Caret)
+- ! (Exclamation)
 - [..] : character classes
   - ls file[12]
   - ls file[1-3]
@@ -11,3 +13,10 @@
   - mkdir dir{1,2,3}
   - mkdir dir{1..10}
   - mkdir -p bin/{dev,qa,prod}
+
+- g?f (gAF, gif, gof)
+- ?? (임의의 두 글자)
+- [gif] (g, i, f 중 한 글자)
+- [a-z] (a에서 z까지 알파벳 소문자 한 글자)
+- [^gif] (g, i, f  이외의 한 글자)
+- [^a-z] (a에서 z까지 알파벳 소문자 이외 모든 문자)

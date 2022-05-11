@@ -16,7 +16,7 @@
 
 ## chown (change file owner and group)
 
-- sudo chown username filename
+- sudo chown [-R] username filename
 - chown username filename (root permission)
 - chown :usergroup filename
 - chown username:usergroup filename

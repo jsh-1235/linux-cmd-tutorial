@@ -7,6 +7,7 @@
 
 ## rmdir (remove empty directories)
 
+- rmdir [-p] backup (인수로 지정한 디렉토리 경로가 존재하면 그 중간 디렉토리도 포함해서 삭제한다.)
 - rmdir backup
 
 ## rm (remove files or directories)
@@ -79,3 +80,14 @@
 - /media - Removable Media Devices
 
 - /srv - Service Data
+
+## Path
+
+- 트리 구조
+  - 루트 디렉토리 (/)
+  - 부모 디렉토리 (..)
+  - 현재 디렉토리 (.)
+  - 서브 디렉토리 (./sub)
+  - 홈 디렉토리 (~)
+- 절대 경로 (Absolute Path)
+- 상대 경로 (Relative Path)

@@ -18,7 +18,6 @@
 - $PPID : 부모 프로세서 ID
 - echo $PPID
 
-
 ## Shell Programming
 
 ```bash
@@ -29,6 +28,7 @@ echo "This second argument : $1"
 echo "The number of arguments : $#"
 echo "This list of argument : $@"
 echo "This list of argument : $*"
+echo "Line number : $LINENO"
 cho "PWD : $PWD"
 echo "PID : $$"
 echo "PPID: $PPID"

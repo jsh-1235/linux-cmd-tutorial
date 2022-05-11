@@ -5,6 +5,7 @@
 - stdin (0) : Keyboard (0<, 0<<) - 표준 입력
 - stdout (1) : Terminal (1>, 1>>) - 표준 출력
 - stderr (2) : Terminal (2>, 2>>) - 표준 에러 출력
+- File Descriptor Number (0, 1, 2)
 
 ## /dev/null
 
@@ -26,6 +27,8 @@
 
 - ls -al /etc > result.txt
 - ls -al /etc > result.txt 2> error.log
+- ls -al a b >2&1 > c.log
+- ls -al a b >& c.log (일반 출력과 에러 출력 모두 c.log에 저장하기)
 
 ## stdout (head)
 
