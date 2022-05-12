@@ -1,17 +1,36 @@
 # wsl (Windows Subsystem for Linux)
 
+- wsl --install
 - wsl --update
 - wsl --list --online
+- wsl --list --verbose
 - wsl -l -v
+
+- wsl --set-default-version 2 (wsl 버전으로 2로 변경)
+- wsl --set-default Ubuntu-20.04
+- wsl -d Ubuntu-20.04 cat /etc/os-release
+
+- wsl --status
+- wsl --help
+
+## wsl (shutdown or terminate)
+
 - wsl -t ubuntu-20.04 (terminate)
-- wsl --shutdown Ubuntu-20.04
+- wsl --shutdown Ubuntu-20.04 (shutdown)
 
 ## Execution
 
 - windows key + r
 - ws
 - wsl -l -v
-- ubuntu2004.exe
+- ubuntu2004.exe or bash
+
+## port forwarding
+
+- wsl --set-default Ubuntu-20.04 (WSL 명령에서 실행에 사용할 기본 Linux 배포판 설정)
+- bash
+- powershell
+- .\ports_wsl.ps1
 
 ## Linux File Position
 

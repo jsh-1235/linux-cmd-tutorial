@@ -36,6 +36,7 @@
 ## nc (Remote port check)
 
 - nc -zv localhost 80
+- nc -zv localhost 22
 - nc -zv daum.net 80
 - nc -zv 15.164.80.55 22
 
@@ -44,6 +45,7 @@
 - 네트워크 인터페이스에서 트랙픽 데이터 취득하기
 - tcpdump
 - sudo tcpdump port http
+- sudo tcpdump -v port http
 - sudo tcpdump -w tcpdump.log port http
 - sudo tcpdump port http and src host www.example.com
 - sudo tcpdump -w tcpdump.log (Write)

@@ -7,8 +7,19 @@
 
 - sudo service ssh start
 - sudo service ssh stop
+- sudo vi /etc/ssh/sshd_config
+- sudo service ssh restart
+
 - ps -aux | grep ssh
-- ssh jsh@192.168.0.72
+- service --status-all | grep ssh
+
+- nmap -PN localhost -p22 | grep ^22
+- nc -zv localhost 22
+
+- sudo tcpdump port 22
+
+- ssh jsh@192.168.0.9 (DESKTOP-JSH)
+- ssh jsh@192.168.0.72 (DESKTOP-SLAVE)
 - exit
 
 ## ssh-keygen
