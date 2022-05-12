@@ -3,6 +3,7 @@
 - Best Effort
 - TTL (Time to Live) : 패킷이 폐기될 때까지의 홉(hop)의 개수
 - TTL이 0이 되면 해당 패킷은 폐기되고 ICMP Time Exceeded 에러를 송신한 호스트로 보낸다.
+- 원격 호스트를 향한 네트워크 경로 표시 (tracepath & traceroute)
 
 ## ping
 
@@ -21,6 +22,7 @@
 
 - traceroute [-nmpI]
 - traceroute www.example.com
+- traceroute -m 2 www.example.com
 
 ## route (show / manipulate the IP routing table)
 

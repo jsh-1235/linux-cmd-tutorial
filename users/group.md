@@ -43,3 +43,4 @@
 - getemt passwd | grep jsh | cut -f1 -d:
 - getemt passwd | grep jsh | cut -f2 -d:
 - getent passwd | awk -F: '{print $1}'
+- getent group users

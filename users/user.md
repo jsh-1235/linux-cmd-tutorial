@@ -1,5 +1,8 @@
 # User
 
+- 네트워크로 정보를 공유하는 서비스를 디렉토리 서비스라고 부른다.
+- LDAP, PAM, NSS
+
 ## w (Show who is logged on and what they are doing.)
 
 - w

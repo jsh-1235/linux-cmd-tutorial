@@ -31,7 +31,12 @@
 - sudo ssh -i "aws-bt-key.pem" ubuntu@ec2-15-164-80-55.ap-northeast-2.compute.amazonaws.com ls
 - exit
 
-## rsync
+## scp (OpenSSH secure file copy)
+
+- sudo scp -i "aws-bt-key.pem" ubuntu@ec2-15-164-80-55.ap-northeast-2.compute.amazonaws.com:~/scp-file .
+- cat scp-file
+
+## rsync (a fast, versatile, remote (and local) file-copying tool)
 
 - sudo rsync -avz ~/projects/ -e "ssh -i aws-bt-key.pem" ubuntu@ec2-52-78-209-69.ap-northeast-2.compute.amazonaws.com:~/projects
 
