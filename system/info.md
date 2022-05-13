@@ -1,5 +1,7 @@
 # info
 
+- cat /etc/issue (Check Linux Version)
+
 ## history (GNU History Library)
 
 - history
@@ -23,7 +25,17 @@
 ## date (print or set the system date and time)
 
 - date
-- sudo date 051013092022 [월일시분년도.초]
+
+## timedatectl (timedatectl)
+
+- timedatectl
+- timedatectl | grep Time
+- timedatectl status
+- timedatectl list-timezones (사용 가능한 모든 시간대 출력)
+- timedatectl list-timezones |  egrep  -o "Asia/S.*"
+- timedatectl set-timezone "Asia/Seoul"
+- timedatectl set-timezone UTC
+- timedatectl set-time '2015-11-20 16:14:50'
 
 ## cal (displays a calendar and the date of Easter)
 

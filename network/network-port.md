@@ -33,7 +33,7 @@
 - nmap -PN daum.net -p80 | grep ^80
 - nmap -PN daum.net -p22 | grep ^22
 
-## nc (Remote port check)
+## nc (arbitrary TCP and UDP connections and listens)
 
 - nc -zv localhost 80
 - nc -zv localhost 22

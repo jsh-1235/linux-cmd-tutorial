@@ -22,6 +22,7 @@
 - 각 파일 시스템 디스크 사용량을 표시한다.
 - df [-ahHt]
 - df -a
+- df -h (human readable)
 
 ## du (estimate file space usage)
 
@@ -44,6 +45,8 @@
 ## free (Display amount of free and used memory in the system)
 
 - free
+- free [-bkmg]
+- free -h
 
 ## lsusb (list USB devices)
 

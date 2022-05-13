@@ -31,6 +31,7 @@
 
 ## sudo (execute a command as another user)
 
+- sudo -i (root user login)
 - sudo -l (현재 사용자에게 허가된 권한 목록을 표시한다.)
 - sudo rm -r root
 - sudo -u jsh touch ~jsh/test.txt (인증을 한번 해두면 한동안 암호를 입력하지 않아도 sudo 명령어를 사용할 수 있다.)

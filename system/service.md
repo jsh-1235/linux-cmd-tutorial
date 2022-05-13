@@ -15,9 +15,10 @@
 ## systemctl (Control the systemd system and service manager)
 
 - systemctl -a list-units
-- systemctl status ssh
-- systemctl start ssh
-- systemctl stop ssh
+- systemctl -a list-units | grep ssh
+- systemctl status sshd
+- systemctl start sshd
+- systemctl stop sshd
 
 ## service (apache2)
 

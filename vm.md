@@ -37,9 +37,25 @@
 - sudo systemctl set-default graphical.target (GUI Mode)
 - reboot
 
-## install
+## ubuntu install
 
 - apt update
-- apt-get update
 - apt install -y openssh-server curl vim tree
 - dpkg -l | grep openssh-server
+
+- sudo vi /etc/ssh/sshd_config
+- port 22 -> port 22221
+
+## centOS install
+
+- yum update
+- yum list (저장소 서버에 있는 모든 패키지 목록)
+- yum list updates
+- yum list available (설치된 패키지 목록)
+- yum list available | grep openssh*
+- yum install -y openssh-server curl vim tree
+- yum remove openssh-server
+- dpkg -l | grep openssh-server
+
+- sudo vi /etc/ssh/sshd_config
+- port 22 -> port 22222
