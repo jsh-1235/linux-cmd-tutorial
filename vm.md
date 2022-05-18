@@ -16,6 +16,10 @@
   - ctrl + shift + '+' (확대)
   - ctrl + '-' (축소)
 
+## 게스트 확장
+
+- 장치 -> 스트 확장 CD 이미지 삽입 -> VboxLunAdditions.run 실행
+
 ## hostname
 
 - vi /etc/hostname

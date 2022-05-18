@@ -7,7 +7,7 @@
 - Korn Shell (ksh)
 - Bourne-again Shell (bash) : GNU Project (csh, ksh 기능 포함)
 
-## find shells
+## Find shells
 
 - cat /etc/shells (List of currently available shells)
 - eche $SHELL (Current Shell)
@@ -15,6 +15,7 @@
 ## chsh (change login shell)
 
 - sudo chsh jsh
+- chsh -s /bin/bash
 - /bin/sh
 - sudo grep jsh /etc/passwd
 - jsh:x:1000:1000:,,,:/home/jsh:/bin/sh

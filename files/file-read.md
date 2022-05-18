@@ -18,6 +18,10 @@
 - cat -b index.html (빈줄은 표시하지 않는다.)
 - cat -A index.html (모든 제어 문자를 표시한다.)
 
+## tac (concatenate and print files in reverse)
+
+- tac backup
+
 ## more (file perusal filter for crt viewing)
 
 - more filename
@@ -47,6 +51,10 @@
 - tail -n 5 filename
 - tail -5 filename
 - tail -f /var/log/filename
+
+## ni (number lines of files)
+
+- nl /etc/default/locate
 
 ## sort (sort lines of text files)
 

@@ -1,6 +1,6 @@
 # DNS
 
-- www.example.com.
+- www.example.com. (sub-domain.second-level-domain.top-level-domain.root-domain)
 - . (Root Domain)
 - com (TLD : Tob Level Domain, gTLD, ccTLD : 국가 코드 최상위 도메인)
 - DNS는 분산형 계층 데이터베이스 시스템으로 각 도메인은 특정 권위(Authoritative)를 지닌 서버가 관리한다.
@@ -16,6 +16,8 @@
 - dig bt-products.ga
 - dig bt-products.ga ns
 - dig @ns01.freenom.com. bt-products.ga ns
+- dig 104.155.29.241
+- dig 104.155.29.241 ns
 - dig 15.164.80.55 ns
 
 ## nslookup (query Internet name servers interactively)

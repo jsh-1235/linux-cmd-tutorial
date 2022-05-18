@@ -48,3 +48,20 @@
 ```
 
 - chmod +x /etc/rc.local
+
+## Auto start
+
+- ls -l /etc/rc?.d/*
+- ls -l /etc/rc?.d/*apache2
+- /etc/init.d/apache2 start
+
+- cd /etc/init.d
+- vim startup.sh
+- chmode +x startup
+- man update-rc.d
+- update-rc.d startup defaults
+- update-rc.d -f startup remove
+- reboot
+
+- systemctl enable apache2 (Enable Auto Start)
+- systemctl disable apache2

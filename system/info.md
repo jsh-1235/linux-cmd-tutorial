@@ -37,6 +37,15 @@
 - timedatectl set-timezone UTC
 - timedatectl set-time '2015-11-20 16:14:50'
 
+## locale (get locale-specific information)
+
+- locale
+- nl /etc/default/locale
+- sudo apt -y install language-pack-ko
+- sudo update-locate LANG=C.UTF-8 (default)
+- sudo update-locale LANG=ko_KR.UTF-8 LC_MESSAGES=POSIX
+- logout (session 종료)
+
 ## cal (displays a calendar and the date of Easter)
 
 - cal

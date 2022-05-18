@@ -1,6 +1,9 @@
 
 # Port
 
+- cat /etc/services | grep ssh
+- cat /etc/services | more
+
 ## ss (another utility to investigate sockets)
 
 - ss [-salntux]
@@ -37,8 +40,8 @@
 
 - nc -zv localhost 80
 - nc -zv localhost 22
-- nc -zv daum.net 80
-- nc -zv 15.164.80.55 22
+- nc -zv ec2-15-164-95-222.ap-northeast-2.compute.amazonaws.com 80
+- nc -zv ec2-15-164-95-222.ap-northeast-2.compute.amazonaws.com 22
 
 ## tcpdump (dump traffic on a network)
 

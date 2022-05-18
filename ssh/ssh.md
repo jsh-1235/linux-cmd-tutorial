@@ -3,6 +3,8 @@
 - sudo apt purge openssh-server openssh-client
 - sudo apt install openssh-server openssh-client
 
+- vim /etc/ssh/sshd_config
+
 ## Operation
 
 - sudo service ssh start
@@ -38,17 +40,17 @@
 - cd ../../mnt/c
 - cd /mnt/c/Products/"Software Devlopment"/Web/DevOps/AWS/Setup/Keys
 - cp aws-bt-key.pem ~/
-- sudo ssh -i "aws-bt-key.pem" ubuntu@ec2-15-164-80-55.ap-northeast-2.compute.amazonaws.com
-- sudo ssh -i "aws-bt-key.pem" ubuntu@ec2-15-164-80-55.ap-northeast-2.compute.amazonaws.com ls
+- sudo ssh -i "aws-bt-key.pem" ubuntu@ec2-15-164-95-222.ap-northeast-2.compute.amazonaws.com
+- sudo ssh -i "aws-bt-key.pem" ubuntu@ec2-15-164-95-222.ap-northeast-2.compute.amazonaws.com ls -al
 - exit
 
 ## scp (OpenSSH secure file copy)
 
-- sudo scp -i "aws-bt-key.pem" ubuntu@ec2-15-164-80-55.ap-northeast-2.compute.amazonaws.com:~/scp-file .
+- sudo scp -i "aws-bt-key.pem" ubuntu@ec2-15-164-95-222.ap-northeast-2.compute.amazonaws.com:~/scp-file .
 - cat scp-file
 
 ## rsync (a fast, versatile, remote (and local) file-copying tool)
 
-- sudo rsync -avz ~/projects/ -e "ssh -i aws-bt-key.pem" ubuntu@ec2-52-78-209-69.ap-northeast-2.compute.amazonaws.com:~/projects
+- sudo rsync -avz ~/projects/ -e "ssh -i aws-bt-key.pem" ubuntu@ec2-15-164-95-222.ap-northeast-2.compute.amazonaws.com:~/projects
 
-- sudo rsync -ahrvz --delete --progress ~/projects/ -e "ssh -i aws-bt-key.pem" ubuntu@ec2-52-78-209-69.ap-northeast-2.compute.amazonaws.com:~/projects
+- sudo rsync -ahrvz --delete --progress ~/projects/ -e "ssh -i aws-bt-key.pem" ubuntu@ec2-15-164-95-222.ap-northeast-2.compute.amazonaws.com:~/projects

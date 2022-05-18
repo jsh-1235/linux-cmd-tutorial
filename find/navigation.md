@@ -40,8 +40,14 @@
 
 ## tree (list contents of directories in a tree-like format.)
 
-- tree
-- tree -p
+- tee
+- Ctrl + D (exit)
+- echo "hello" | tee file-name
+
+## tee (read from standard input and write to standard output and files)
+
+- 표준 입력으로부터 데이터를 읽어 표준 촐력으로 출력하거나 또는 이와 동시에 파일에 저장할 수 있다.
+- 표준 출력과 파일 저장을 동시에 수생할 수 있기 때문에 파이프라인을 양 갈래로 나누어 보낼 수 있다.
 
 ## 명령어 자동 완성
 
