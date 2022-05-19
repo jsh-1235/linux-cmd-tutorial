@@ -14,7 +14,6 @@
 
 ## chsh (change login shell)
 
-- sudo chsh jsh
 - chsh -s /bin/bash
 - /bin/sh
 - sudo grep jsh /etc/passwd

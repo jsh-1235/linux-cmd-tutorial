@@ -6,9 +6,9 @@
 
 ## which (which  returns  the pathnames of the files (or links) which would be executed in the current environment.)
 
-- which ls
-- which -a ls
-- locate a command
+- which date (지정한 명령어의 경로 확인)
+- which -a date
+- /usr/bin/date
 
 ## whereis (locate the binary, source, and manual page files for a command)
 

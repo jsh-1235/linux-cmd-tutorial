@@ -2,7 +2,7 @@
 
 ## pwd (Print Working Directory)
 
-- pwd
+- pwd (현재 디렉토리의 절대 경로 출력)
 
 ## cd (Change Directory)
 
@@ -24,19 +24,38 @@
 ## ls (list directory contents)
 
 - ls
-- ls -l
-- ls -al
-- ls -ld (list directories themselves, not their contents)
-- ls -alh (with -l and -s, print sizes like 1K 234M 2G etc.)
-- ls -alS (sort by file size, largest first)
-- ls -alX (sort alphabetically by entry extension)
-- ls -al *.html
-- ls -l | grep "^d" (only directory)
+- ls -a (모든 파일을 촐력)
+- ls -i (파일의 inode 출력)
+- lis -il
+- ls -k (파일의 크기를 KB 단위로 출력)
+- ls -l (파일 목록의 형태, 권한, 소유자 그룹, 크기, 시간, 파일명을 자세하게 나열)
+- ls -m (목록을 가로로 나열)
+- ls -n (소유자를 UID, 소유 그룹을 GI로 표시한다.)
+- ls -s (파일 크키글 KB 단위로 출력)
+- ls -r (정렬 순서를 내림 차순으로 변경)
+- ls -c (최근 변경 시간에 따라 정렬해서 출력)
+- ls -t (파일 정렬을 최근에 사용한 순서대로 출력)
 - ls -F (append indicator (one of */=>@|) to entries)
 - ls -alF
   - / : Directory
   - @ : Symbolic Link
   - '*' : 실행 가능 파일
+
+- ls -ld (list directories themselves, not their contents)
+
+- ls -A (".", ".."을 제외)
+- ls -R (하위 경로와 그 안에 있는 모든 파일들을 나열한다.)
+- ls -R
+- ls -lR
+- ls -1R (한 줄에 한 파일씩 나열)
+
+- ls -alh (with -l and -s, print sizes like 1K 234M 2G etc.)
+- ls -alS (sort by file size, largest first)
+- ls -alX (sort alphabetically by entry extension)
+
+- ls -al
+- ls -al *.html
+- ls -l | grep "^d" (only directory)
 
 ## tree (list contents of directories in a tree-like format.)
 

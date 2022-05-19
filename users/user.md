@@ -17,6 +17,10 @@
 - whoami
 - Print the user name associated with the current effective user ID.  Same as id -un.
 
+## logname (print user´s login name)
+
+- logname (시스템에 로그인한 사용자명 출력)
+
 ## id (print real and effective user and group IDs)
 
 - id

@@ -42,4 +42,3 @@
 
 - docker run -it -p 8080:80 --rm -v $(pwd):/usr/share/nginx/html/ nginx
 - docker-compose.yml
-

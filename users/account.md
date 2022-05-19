@@ -40,6 +40,7 @@
 - sudo useradd -g users username (특정 그룹 지정)
 - useradd -e 2022-12-30 -m user
 - passwd manager
+- chsh 
 
 ## userdel (delete a user account and related files)
 

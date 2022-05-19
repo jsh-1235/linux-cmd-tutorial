@@ -2,6 +2,7 @@
 
 ## file (determine file type)
 
+- 지정한 파일의 유형을 확인
 - text file or binary file
 - file *
 - file test.txt

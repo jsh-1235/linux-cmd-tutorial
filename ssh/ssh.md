@@ -47,7 +47,12 @@
 ## scp (OpenSSH secure file copy)
 
 - sudo scp -i "aws-bt-key.pem" ubuntu@ec2-15-164-95-222.ap-northeast-2.compute.amazonaws.com:~/scp-file .
+
+- sudo scp jsh@192.168.0.72:~/scp-file .
 - cat scp-file
+
+- sudo scp jsh@192.168.0.72:/mnt/c/Users/bt_js/Projects/linux-cmd-tutorial/system/* ~/download
+- explorer.exe .
 
 ## rsync (a fast, versatile, remote (and local) file-copying tool)
 
