@@ -8,6 +8,7 @@
 
 ## top
 
+- 현재 시스템에서 실행되고 있는 프로세스 상태를 실시간으로 화면에 출력해 준다.
 - top (display Linux processes)
 
 ## htop (interactive process viewer)
@@ -41,6 +42,11 @@
   - START : 시작 시간
   - TIME : CPU 시간
   - COMMAND : 명령어
+  - PRI : 실제 실행 우선 순위
+  - NI : nice 우선순위 번호
+  - WCHAN : 프로세스를 기다리고 있는 이벤트
+  - PLAGS : 프로세스와 관련된 숫자 값
+  - C(sysV), CP(BSD) : 짧은 기간 동안의 CPU 사용률
 
 - ps 1000 (pid)
 - ps t0 (tty)
@@ -57,6 +63,7 @@
   - U user : user 사용자가 실행한 프로세서만 표시 (ps -U jsh)
   - l : PRI (Priority)
 - ps -alx
+- ps -al
 
 ## jobs (Display status of jobs.)
 
@@ -77,6 +84,7 @@
 - fg %n
 - ctrl + c (강제 종료)
 - ctrl + z (실행 정지 : Stopped)
+- ctrl + d (작업 정상 종료)
 
 ## bg (Background execution)
 
@@ -101,10 +109,33 @@
   - KILL (9) : 프로세스에 강제 종료 신호를 보낸다.
   - TERM (15): 프로세스에 종료 신호를 보낸다.
   - CONT (18): 프로세서에 재개 신호를 보냅니다.
-  - STOP (19): 프로세스에 정지 신호를 보냅니다.
+  - STOP (19): 로세스에 정지 신호를 보냅니다.
+
+## killall
+
+- 프로세서를 이름을 지정하여 프로세스를 종료시킬 수 있다.
+- 보통 데몬을 종료시킬 때 유용하다.
+- killall -l (list all known signal names)
 - killall xeyes
+- killall apache2
 
 ## nice (run a program with modified scheduling priority)
 
-- nice xeyes & (기본 NI + 10)
-- nice -19 xeyes & (0 + 19)
+- 프로세스의 스케줄링 우선권을 변경하여 프로그램을 수행한다.
+- 조정 범위 : -20 ~ 19
+- 일반 사용자는 NI 값을 증가만 시킬= 수 있고 관리자인 root는 값을 감소시켜 우선순위를 높일 수 있다.
+- nice xeyes & (기본: NI + 10 = 10)
+- nice -n 19 xeyes & (0 + 19)
+- ps -al | grep xeyes
+
+## renice
+
+- 실행중인 프로세스의 우선순위를 변경하는 명령어이다.
+- xeyes &
+- ps -al | grep xeyes
+- renice 10 -p pid
+
+## pstree
+
+- 프로세스들을 계층적인 트리구조 형태로 출력해준다.
+- pstree

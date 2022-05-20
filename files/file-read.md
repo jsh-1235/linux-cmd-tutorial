@@ -53,7 +53,7 @@
 - tail -5 filename
 - tail -f /var/log/filename
 
-## ni (number lines of files)
+## nl (number lines of files)
 
 - nl /etc/default/locate
 
@@ -64,20 +64,17 @@
 - sort -r -k 2,3 sorting.txt
 - sort north | uniq
 
-## type (Display information about command type.)
-
-- type [-atp] cat
-- type -t cat (지정한 명령어 종류 표시)
-- type ls
-- type -a ls
-
 ## hash (Remember or display program locations.)
 
 - hash
 
 ## cut (remove sections from each line of files)
 
+- 파일에서 필드 구분자를 이용하여 특정 필드를 추출해 낸다.
 - echo 'hello world' | cut -c 1-4
+- cut  -d ':' -f 1 /etc/passwd
+- cut  -d ':' -f5 /etc/passwd
+- cut  -d ':' -f2,4  /etc/passwd
 
 ## sed (stream editor for filtering and transforming text)
 
@@ -86,8 +83,17 @@
 
 ## awk (pattern scanning and processing language)
 
-- s -l | awk '{print $9 " " $5}'
+- ls -l | awk '{print $9 " " $5}'
 - awk -F, '{print $2}' data.csv
 - awk -F, '{print $3 / ($2 / 100) ^ 2}' data.csv (BMI 계산)
 - awk -F, '{print $2 + $3}' data.csv
 - tail /etc/group | awk -F: '{print $1}'
+
+## grep (print lines that match patterns)
+
+- 파일에서 특정한 패턴 또는 정규 표현식으로 나타낸 단어를 찾는 명령어이다.
+- cat /etc/passwd | grep manager | cut -d ':' -f1,2,6
+
+## split (split a file into pieces)
+
+- split

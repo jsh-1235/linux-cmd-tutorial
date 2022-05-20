@@ -3,8 +3,6 @@
 - sudo apt purge openssh-server openssh-client
 - sudo apt install openssh-server openssh-client
 
-- vim /etc/ssh/sshd_config
-
 ## Operation
 
 - sudo service ssh start
@@ -22,6 +20,7 @@
 
 - ssh jsh@192.168.0.9 (DESKTOP-JSH)
 - ssh jsh@192.168.0.72 (DESKTOP-SLAVE)
+- ssh jsh@192.168.0.72 -p22221 (DESKTOP-SLAVE)
 - exit
 
 ## ssh-keygen
@@ -34,6 +33,13 @@
 - ssh jsh@192.168.0.72 (No login required) (ssh client)
 - ssh -l jsh 192.168.0.72
 - sudo service ssh start (ssh server)
+
+## ssh port
+
+- cat /etc/ssh/sshd_config | egrep ^\#?Port
+- sudo vim /etc/ssh/sshd_config
+- Port 22
+- netstat -anp | grep LISTEN | grep sshd
 
 ## AWS
 

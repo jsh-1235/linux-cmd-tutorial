@@ -63,6 +63,10 @@
 - uptime -p
 - cat /etc/issue
 
+## tty (print the file name of the terminal connected to standard input)
+
+- tty
+
 ## uname (print system information)
 
 - uname [-snrvmpio]
@@ -82,3 +86,8 @@
 - dmesg
 - dmesg -c (시스템 메시지를 출력한 수 시스템 버퍼를 비운다.)
 - dmesg | grep Memory
+
+## time (run programs and summarize system resource usage)
+
+- time cal
+- time date

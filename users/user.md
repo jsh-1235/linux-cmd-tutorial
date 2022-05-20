@@ -28,13 +28,21 @@
 - id -u manager
 - id -gn manager
 
+## users (print the user names of users currently logged in to the current host)
+
+- 시스템 로그인한 사용자 정보를 출력하는 명령어이다.
+- users
+
 ## su (run a command with substitute user and group ID)
 
+- su (Switch user or substitute user)
+- 현재의 사용자 계정에서 로그아웃하지 않고 다른 사용자 계정으로 로그인하여 해당 사용자의 권한을 획득하는 명령어이다.
 - su root
 - su - root (사용자의 환경 변수를 이어 받지 않는다. 새롭게 로그인한 것과 동일하다.)
 
 ## sudo (execute a command as another user)
 
+- sudo (substitute user do)
 - sudo -i (root user login)
 - sudo -l (현재 사용자에게 허가된 권한 목록을 표시한다.)
 - sudo rm -r root

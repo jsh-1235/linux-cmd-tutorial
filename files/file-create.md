@@ -88,3 +88,11 @@
 - ls -lF
 - cat link-file
 
+## chattr (change file attributes on a Linux file system)
+
+- chattr +i log (immutable: 파일을 수정할 수 없으며, 오직 관리자만 이 속성을 설정하거나 변경할 수 있다.)
+- chattr -i log
+
+## lsattr (list file attributes on a Linux second extended file system)
+
+- lsattr log

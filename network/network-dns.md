@@ -22,6 +22,7 @@
 
 ## nslookup (query Internet name servers interactively)
 
+- 도메인명으로 IP 주소를 조회하거나 또는 IP 주소로 도메인명을 조회하는 명령어이다.
 - nslookup bt-products.ga
 
 ## host (DNS lookup utility)

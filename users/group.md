@@ -38,9 +38,9 @@
 
 ## getent (get entries from Name Service Switch libraries)
 
-- getemt passwd
-- getemt passwd | grep jsh
-- getemt passwd | grep jsh | cut -f1 -d:
-- getemt passwd | grep jsh | cut -f2 -d:
+- getent passwd
+- getent passwd | grep jsh
+- getent passwd | grep jsh | cut -f1 -d:
+- getent passwd | grep jsh | cut -f2 -d:
 - getent passwd | awk -F: '{print $1}'
 - getent group users

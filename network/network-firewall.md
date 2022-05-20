@@ -9,3 +9,7 @@
 - sudo ufw allow https : sudo ufw allow 443/tcp
 - sudo ufw reload
 - sudo ufw status
+
+## iptables (administration tool for IPv4/IPv6 packet filtering and NAT)
+
+- iptables -L
