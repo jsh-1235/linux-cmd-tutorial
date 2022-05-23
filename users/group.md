@@ -8,6 +8,7 @@
 
 ## groups (print the groups a user is in)
 
+- 현재 사용자가 속해 있는 그룹을 확인
 - groups
 - groups root
 - groups manager
@@ -16,7 +17,7 @@
 
 ## groupadd (create a new group)
 
-- groupadd bt
+- groupadd [-gor] bt
 - echo $?
 - tail /etc/group
 
@@ -28,19 +29,13 @@
 
 ## gpasswd (administer /etc/group and /etc/gshadow)
 
-- gpasswd -a group user (add)
-- gpasswd -d group user (delete)
-- groups manager (manager jsh)
+- 사용자 그룹 패스워드 설정, 관리자와 멤버 추가/삭제
+- gpasswd group (그릅 패스워드 설정)
+- gpasswd -A admin group (그룹 관리자 추가)
+- gpasswd -a user group(그룹 멤버 추가)
+- gpasswd -d user group(그룹 멤버 삭제)
+- gpasswd -M user group(그룹 멤버 변경)
 
 ## groupmod (modify a group definition on the system)
 
-- groupmod -n group-2 group-1
-
-## getent (get entries from Name Service Switch libraries)
-
-- getent passwd
-- getent passwd | grep jsh
-- getent passwd | grep jsh | cut -f1 -d:
-- getent passwd | grep jsh | cut -f2 -d:
-- getent passwd | awk -F: '{print $1}'
-- getent group users
+- groupmod -n group-2 group-1 (그룹 1을 그룹 2로 변경)

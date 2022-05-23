@@ -6,6 +6,12 @@
 - DNS는 분산형 계층 데이터베이스 시스템으로 각 도메인은 특정 권위(Authoritative)를 지닌 서버가 관리한다.
 - 각 네임 서버에는 캐시가 있지만 캐시에 데이터가 없을 경우 최상위 도메인을 관리하는 서버에 문위하면 권위를 지닌 서버까지 도달 할 수 있다.
 
+## domain name structure
+
+- www.naver.com
+  - www : sub domain
+  - naver.com : host name
+
 ## dns server
 
 - cat /etc/resolv.conf (DNS Server)
@@ -24,6 +30,9 @@
 
 - 도메인명으로 IP 주소를 조회하거나 또는 IP 주소로 도메인명을 조회하는 명령어이다.
 - nslookup bt-products.ga
+- nslookup dns.google.
+- nslookup 8.8.8.8
+
 
 ## host (DNS lookup utility)
 

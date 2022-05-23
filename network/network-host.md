@@ -3,13 +3,17 @@
 - hostname - show or set the system's host name
 - cat /etc/hostname
 
-## host name / sub domain
+## dnsdomainname
 
-- www.naver.com
-  - www : sub domain
-  - naver.com : host name
+- dnsdomainname
+- localdomain
 
-## nslooup
+## /etc/hosts
 
-- nslookup dns.google.
-- nslookup 8.8.8.8
+- vim /etc/hosts
+- 127.0.1.1       DESKTOP-JSH.localdomain DESKTOP-JSH
+- curl DESKTOP-JSH.localdomain
+
+## add a static ip address
+
+- ip a

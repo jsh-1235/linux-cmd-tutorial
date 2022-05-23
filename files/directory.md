@@ -12,6 +12,9 @@
 - 상태 경로명 (Relative Path Name)
   - 현재의 위치를 기존으로 파일이나 디렉토리 위치를 나타낸다.
 
+- 네트워크로 정보를 공유하는 서비스를 디렉토리 서비스라고 부른다.
+  - LDAP, PAM, NSS
+
 ## mkdir (make directories)
 
 - mkdir backup

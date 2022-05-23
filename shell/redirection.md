@@ -35,9 +35,15 @@
 - head -n 5 result.txt > result2.txt (Redirects the output of the head command (detailed above) to a file "new_file")
 - head -n 10 some_file >> exist_file
 
+## joining stdout and stderr
+
+- rm file &> out_and_err
+- The &> construction will put both stdout and stderr in one stream
+
 ## mailx
 
 - sudo mailx -s "Test Mail" bt1@localhost
 - ctrl+d
 - sudo mailx -s "Test Mail" bt1@localhost < message.txt
 - mailx
+

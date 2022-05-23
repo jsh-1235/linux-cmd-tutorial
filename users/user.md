@@ -1,37 +1,63 @@
 # User
 
-- 네트워크로 정보를 공유하는 서비스를 디렉토리 서비스라고 부른다.
-- LDAP, PAM, NSS
+## adduser
 
-## w (Show who is logged on and what they are doing.)
+- adduser manager
 
-- w
-- w [-hfs]
+## useradd
 
-## who (show who is logged on)
+- useradd [-mcdefP] manager
+- useradd -m manager (create home directory)
+- useradd -m -c comment manager (create home directory)
+- useradd manager -d /home/manager_dir (사용자의 홈 디렉토리 지정)
+- useradd -g users username (사용자 그룹의 UID 지정)
+- useradd -e 2022-12-30 -m user (사용자의 계정 만기일 지정)
 
-- who
+## userdel (delete a user account and related files)
 
-## whoami (print effective userid)
+- userdel manager
+- userdel -f manager
+- userdel -r manager (사용자 홈디렉토리도 함께 삭제한다.)
+- sudo userdel -r manager
 
-- whoami
-- Print the user name associated with the current effective user ID.  Same as id -un.
+## chage (change user password expiry information)
 
-## logname (print user´s login name)
+- 사용자 패스워드 관리
+- 패스워드의 만료 정보를 변경하는 명령어이다.
+- chage -l jsh (chage 설정 확인)
+- chage -m 5 -M 100 -W 10 -E 2023/01/01 jsh
+  - jsh 계정의 패스워드를 5일 후에 변경할 수 있도록 설정
+  - 100일 이내에 변경해야만 하고, 만기일 10일 전부터 패드워드를 변경하도록 메시지 전달
+  - 계정의 사용은 2023년 1월 1일 까지 제한하도록 구성
 
-- logname (시스템에 로그인한 사용자명 출력)
+## passwd  (change user password)
 
-## id (print real and effective user and group IDs)
+- sudo passwd root
+- passwd manger
+- sudo passwd -u root (unlock)
+- sudo passwd -l root
 
-- id
-- id [-Ggun] manager
-- id -u manager
-- id -gn manager
+## usermod (modify a user account)
 
-## users (print the user names of users currently logged in to the current host)
+- 사용자 계정 속성 변경 [-ugGcdefs]
+- sudo usermod -aG sudo manager (add sudoers)
+- usermod -u 1001 manager
+- usermod -c owner jsh (사용자 정보(comment) 수정)
+- usermod -s /bin/bash jsh (로그인 시 사용할 기본 쉘 지정)
+- usermod -G bt bt1 (사용자 계정의 2차 그룹의 GID 지정)
 
-- 시스템 로그인한 사용자 정보를 출력하는 명령어이다.
-- users
+## chsh (change login shell)
+
+- chsh -s /bin/bash
+- logout
+
+## login (begin session on the system)
+
+- login
+- su - manager
+- su --login manager
+- exit (logout)
+- logout
 
 ## su (run a command with substitute user and group ID)
 
@@ -49,20 +75,3 @@
 - sudo -u jsh touch ~jsh/test.txt (인증을 한번 해두면 한동안 암호를 입력하지 않아도 sudo 명령어를 사용할 수 있다.)
 - sudo -u root rm root-file
 - sudo -u jsh rm jsh-file
-
-## passwd (change user password)
-
-- sudo passwd -u root (unlock)
-- sudo passwd -l root
-
-## usermod (modify a user account)
-
-- sudo usermod -aG sudo manager (add sudoers)
-- usermod -u 1001 manager
-
-## user, group, permission
-
-- OS는 사용자를 고유한 User ID로 관리한다.
-- 사용자는 반드시 하나의 그룹에 속해야 하며, 사용자가 주로 속하는 그룹을 Primary Group 이라고 한다.
-- 그룹도 Group ID라는 번호를 할당받아서 관리된다.
-- 리눅스는 파일이나 디렉토리마다 일기 권한, 쓰기 권한, 실행 권한을 설정한다.

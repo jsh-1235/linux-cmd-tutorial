@@ -45,3 +45,10 @@
 - 6 (재부팅 모드: reboot)
 
 - init -t 10 0 (10초 뒤에 시스템 종료)
+
+## runlevel
+
+- runlevel
+- who -r
+- systemctl get-default
+- ls /lib/systemd/system/runlevel?.target -ls
