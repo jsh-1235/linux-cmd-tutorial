@@ -9,6 +9,7 @@
 - man man
 - man ls
 - man ls -f (whatis와 같이 간단한 설명만 출력)
+- man -w ls (whereis)
 - man ls | grep 'sort'
 - man ls | grep 'sort' | grep 'file'
 - /search (navigation => n : forward, b: backward)

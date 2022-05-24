@@ -24,3 +24,4 @@
 ## feh (image viewer and cataloguer)
 
 - feh img.jpg
+- feh -d img.jpg

@@ -7,6 +7,32 @@
   - distribution : Ubuntu-20.04 LTS (focal)
 - APT(Advanced Packaging Tool)는 데비안(Debian) GNU/리눅스 계열의 패키지 관리 명령도구로 우분투(Ubuntu)에서도 지원한다.
 
+## RMP (RedHat Package Manager)
+
+- RedHat 계열의 리눅스는 RPM 형태의 바이너리 패키지로 배포가 이루어진다.
+- RPM은 RedHat에서 만든 패키지 배포 및 관리 프로그램으로 리눅스 소스 및 컴파일된 프로그램의 배포, 업그레이드 관리 등을 쉽게 하기 위해 프로그램과 설정 파일 등을 하나로 묶어 만든 것을 말한다.
+
+- rpm -ivh tree (설치)
+- rpm -q tree
+- rpm -qa tree | grep tree
+- rpm -e tree (제거)
+
+## yum (Yellowdog Updater Modified)
+
+- RPM 명령의 패키지 의존성 문제를 해결
+- 인터넷을 통하여 필요한 파일들을 저장소(Repository)에서 다운로드 해서 설치하는 방식
+- 또한 의존성을 가지는 다른 RPM 패키지까지 알아서 다운로드하여 설치한다.
+- Update된 패키지들을 검사하고, 다운로드하여 설치까지 자동으로 진행한다.
+
+- sudo yum update (모든 패키지 업데이트)
+- yum check-update (설치된 패키지 중에 업데이트가 가능한 패키지 목록 출력)
+
+- yum -y (설치 여부를 묻지 않고 바로 설치한다.)
+- yum install tree
+- yum update tree
+- yum remove tree
+- yum info tree
+
 ## apt (command-line interface)
 
 - apt: 더 나은 대화식 사용을위한 고급 명령 줄 인터페이스이다.

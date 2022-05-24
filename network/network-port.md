@@ -13,13 +13,14 @@
 - ss -u (utp)
 - ss -x (UNIX 도메인 소켓 정보 표시)
 - ss | grep tcp
+- ss | grep ssh
 
 ## netstat (Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships)
 
 - netstat
 - netstat -tnlp
 - netstat -lntup
-- netstat -nap | grep LISTENING
+- netstat -nap | grep LISTEN*
 
 ## lsof (list open files)
 

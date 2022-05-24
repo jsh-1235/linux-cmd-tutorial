@@ -1,5 +1,10 @@
 # ssh (secure shell)
 
+- SSH(Secure Shell)은 패킷이 암호화 되어 전송이 되므로 보다 안전하다.
+- 운영체제에 상관없이 TELNET 클라이언트 프로그램이 있으면 접속이 가능하다.
+
+## package install
+
 - sudo apt purge openssh-server openssh-client
 - sudo apt install openssh-server openssh-client
 
