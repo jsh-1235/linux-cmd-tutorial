@@ -92,6 +92,12 @@
 - du -sh ~ (홈 디렉토리의 전체 용량 확인)
 - du -sh /var/* (var 디렉토리의 전체 용량 확인)
 
+## fallocate (Preallocate space to, or deallocate space from a file.)
+
+- fallocate -l 1K file-name
+- fallocate -l 1M file-name
+- fallocate -l 1G file-name
+
 ## free (Display amount of free and used memory in the system)
 
 - free
