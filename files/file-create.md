@@ -37,10 +37,19 @@
 - touch file-name{1..3}
 - touch -t 202205100941
 
-## cat
+## cat (concatenate files and print on the standard output)
 
 - cat > test.txt
 - cat >> test.txt (append)
+- ctrl + d (complete)
+
+- cat a1 a2 a3
+- cat a*
+
+## tac (concatenate and print files in reverse)
+
+- tac > test.txt
+- tac >> test.txt (append)
 - ctrl + d (complete)
 
 ## symbolic link

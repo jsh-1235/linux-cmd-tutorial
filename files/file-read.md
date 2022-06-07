@@ -14,14 +14,24 @@
 
 ## cat (concatenate files and print on the standard output)
 
-- cat backup
+- cat file
 - cat -n index.html
 - cat -b index.html (빈줄은 표시하지 않는다.)
 - cat -A index.html (모든 제어 문자를 표시한다.)
+- cat > file (Output Redirection)
+- cat >> file (Append)
 
 ## tac (concatenate and print files in reverse)
 
 - tac backup
+
+## tee (read from standard input and write to standard output and files)
+
+- tee
+- cat a1 | tee a2
+- ls -al / | tee a1
+- dpkg -l | tee a1
+- whoami | tee -a a1 (append)
 
 ## more (file perusal filter for crt viewing)
 
@@ -41,21 +51,69 @@
 ## head (file perusal filter for crt viewing)
 
 - head filename
-- head -n filename
-- head -n 5 filename
-- head -5 filename
+- head -n 10 filename (default: 처음부터 10째줄 까지)
+- head -n 5 filename (head -n +5 filename, head 5 filename)
+- head -n -5 filename
+- head -c 40 filename (40 bytes)
+
+- head -n 5 city number (앞의 다섯줄만 보여준다.)
+- head -n 5 city number -q (--quiet: never print headers giving file names)
 
 ## tail (file perusal filter for crt viewing)
 
 - tail filename
-- tail -n filename
-- tail -n 5 filename
-- tail -5 filename
-- tail -f /var/log/filename
+- tail -n 10 filename (default: 끝에서 10째줄 까지)
+- tail -n 5 filename (tail -n -5 filename, tail -5 filename)
+- tail -n +5 filename (5 ~ end : 앞의 다섯줄은 제외하고 보여준다.)
+- tail -n +5 number city -q
+- tail -c 40 filename (40 bytes)
+
+- tail -f /var/log/filename (output appended data as the file grows)
 
 ## nl (number lines of files)
 
-- nl /etc/default/locate
+- nl /etc/sources (cat -b)
+- nl a1 a2 a3
+
+- nl -w1 a1
+- nl -w6 a1
+- nl -w10 a1
+
+- nl -i2 a1
+- nl -i2 -v2 a1
+- nl -i2 -v2 a1 > a2
+- nl a2 | more
+
+## seq (print a sequence of numbers)
+
+- seq 100 100 500
+- seq 100 100 500 | nl > a
+
+## split (split a file into pieces)
+
+- alias lh='ls -Alh'
+- split -C 3k file
+- split -b 1k file
+- split -b 1k -d file (use numeric suffixes starting at 0, not alphabetic)
+- split -b 1k -d -a 4 file
+- split -b 1k -d --additional-suffix=.txt file (append an additional SUFFIX to file names)
+- split -b 1k -d --additional-suffix=.txt file backup_
+- split -l 100 -d --additional-suffix=.txt file backup_ (줄 단위로 쪼개기)
+- wc backup_00.txt
+- split -n 10 -d --additional-suffix=.txt file backup_ (똑같이 쪼개기)
+- split -n 10 -d --numeric-suffixes=10 --additional-suffix=.txt file backup_ (파일 이름이 10부터 시작)
+
+## csplit (split a file into sections determined by context lines)
+
+- csplit file 100 (100번째 줄을 기준으로 파일을 나눈다.)
+- csplit file -f t_ 100
+- csplit file 100 200
+- csplit file /pattern/
+- csplit file /pattern/1
+- csplit file /pattern/-1
+
+- csplit -f t_ /etc/services /smtp/
+- csplit -f t_ /etc/services /smtp/ {*} (smtp가 들어있는 모든 줄을 기준으로 쪼개기)
 
 ## sort (sort lines of text files)
 
@@ -93,7 +151,3 @@
 
 - 파일에서 특정한 패턴 또는 정규 표현식으로 나타낸 단어를 찾는 명령어이다.
 - cat /etc/passwd | grep manager | cut -d ':' -f1,2,6
-
-## split (split a file into pieces)
-
-- split
