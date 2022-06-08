@@ -90,7 +90,6 @@
 
 - init -t 10 0 (10초 뒤에 시스템 종료)
 
-
 ## runlevel
 
 - runlevel

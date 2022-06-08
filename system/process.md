@@ -192,3 +192,9 @@
 - mc
 
 ## setup
+
+## yes (print a random, hopefully interesting, adage)
+
+- yes (output a string repeatedly until killed)
+- yes I love you.
+- ctrl + c (exit)

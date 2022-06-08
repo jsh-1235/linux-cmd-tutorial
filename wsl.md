@@ -16,7 +16,7 @@
 ## wsl (shutdown or terminate)
 
 - wsl -t ubuntu-20.04 (terminate)
-- wsl --shutdown Ubuntu-20.04 (shutdown)
+- lotdown Ubuntu-20.04 (shutdown)
 
 ## Execution
 

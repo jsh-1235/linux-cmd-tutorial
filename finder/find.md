@@ -72,6 +72,10 @@
 - find . -type f -name "file1" -exec rm -f {} \;
 - find . –name file1 –exec ls –al {} \;
 
+- find / -type l -exec ls -al {} \; 2> /dev/null (link)
+- find / -type s -exec ls -al {} \; 2> /dev/null (socket)
+- find / -type p -exec ls -al {} \; 2> /dev/null (pipe)
+
 ## find (type)
 
 - find ./bin/ -type d

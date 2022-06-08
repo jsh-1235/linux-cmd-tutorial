@@ -5,17 +5,6 @@
 
 - fortune
 
-## yes (print a random, hopefully interesting, adage)
-
-- yes (output a string repeatedly until killed)
-- yes I love you.
-- ctrl + c (exit)
-- jobs
-- fg
-- ps -aux | grep yes
-- kill %1
-- kill -9 %1
-
 ## rev (reverse lines characterwise)
 
 - rev filename
