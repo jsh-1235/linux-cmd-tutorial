@@ -35,9 +35,8 @@
 - grep /bin/bash /etc/passwd | cut -d: -f 1 | wc -l
 - tail -n 3 /etc/passwd
 - grep manager /etc/passwd (Check Login Shell)
-- jsh:x:1000:1000:,,,:/home/jsh:/bin/bash
-
-- User Account/Passwd/UID/GID/Commnet/HOME-DIR/SHELL
+  - [User Account/Passwd/UID/GID/Commnet/HOME-DIR/SHEL]
+  - [jsh:x:1000:1000:,,,:/home/jsh:/bin/bash
 
 ## /etc/shadow
 

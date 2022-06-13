@@ -11,7 +11,6 @@
 
 ## Execution mode
 
-- :e! (모든 작업 취소)
 - :w new-file (새이름으로 저장하기)
 - :wq (저장하고 나가기) (:x, ZZ)
 - :q (나가기)

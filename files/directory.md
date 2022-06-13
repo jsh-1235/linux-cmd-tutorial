@@ -18,18 +18,26 @@
 ## mkdir (make directories)
 
 - mkdir backup
+- mkdir dir{1..10}
 - mkdir -p a/b/c
+- ls -R
 
 ## rmdir (remove empty directories)
 
 - rmdir [-p] backup (인수로 지정한 디렉토리 경로가 존재하면 그 중간 디렉토리도 포함해서 삭제한다.)
 - rmdir backup
+- rmdir dir{1..10}
+- rmdir -p a/b/c
 
 ## rm (remove files or directories)
 
 - rm -r backup
 - rm -ri backup (prompt before every removal)
 - rmdir -v * (output a diagnostic for every directory processed)
+
+- alias rm='rm -i'
+- \rm test
+- rm -f test
 
 ## mv (move (rename) files)
 

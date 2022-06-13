@@ -32,10 +32,11 @@
   - [-c : 인수로 지정한 파일이 존재하지 않아도 새로 작성하지 않는다.]
   - [-r : 최종 갱신일을 file 날짜에 맞춥니다.]
   - [-t : 최종 갱신일을 time으로 변경합니다.]
-- touch file-name
-- touch -a file-name (change only the access time)
-- touch file-name{1..3}
-- touch -t 202205100941
+- touch test
+- touch test{1..3}
+- touch -a test (change only the access time)
+- touch -t 202205100941 test
+- ls -lc (time of last modification of file status information)
 
 ## cat (concatenate files and print on the standard output)
 

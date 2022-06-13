@@ -37,6 +37,14 @@
 - nmap -PN daum.net -p80 | grep ^80
 - nmap -PN daum.net -p22 | grep ^22
 
+- nmap -sV 211.43.203.114 -oX nmap_result.xml
+
+- apt install xsltproc
+- xsltproc nmap_result.xml -o nmap_result.html
+- ln -s "/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe" chrome.exe
+- ./chrome.exe nmap_result.html
+-
+
 ## nc (arbitrary TCP and UDP connections and listens)
 
 - nc -zv localhost 80
