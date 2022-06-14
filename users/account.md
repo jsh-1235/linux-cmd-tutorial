@@ -44,6 +44,9 @@
 - sudo cat /etc/shadow
 - jsh:$6$EkLmaqtlJTzlBHPE$9w1s4Q0sXQLVcP/WJWGaln2R2l5umMckcmIW8CWaJ68zgJe/ehOvk24hcshWacetKNexd1cH4bljkC/uRJ5R10:19122:0:99999:7:::
 
+- nl /etc/shadow | cut -d':' -f 1,2
+- nl /etc/shadow | cut -d':' -f 1,2 | grep !
+
 ## /etc/group
 
 - 사용자 그룹에 대해 정의되어 있는 파일이다.
@@ -79,3 +82,26 @@
 - sudo cat /etc/sudoers
 - su -
 - visudo
+
+## FILES
+
+- /etc/group
+  - Group account information.
+
+- /etc/gshadow
+  - Secure group account information.
+
+- /etc/login.defs
+  - Shadow password suite configuration.
+
+- /etc/passwd
+  - User account information.
+
+- /etc/shadow
+  - Secure user account information.
+
+- /etc/subgid
+  - Per user subordinate group IDs.
+
+- /etc/subuid
+ - Per user subordinate user IDs.

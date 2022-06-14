@@ -43,9 +43,10 @@
   - apt install tree (패키지 설치)
   - apt remove tree (설치한 패키지 제거)
   - apt upgrade tree (설치한 패키지 업그레이드)
-  - dpkg -L tree (설치한 패키지에 포함된 파일 확인)
-  - dpkg -l (설치된 패키지 확인)
+
+  - dpkg -l (설치된 패키지 전체 확인)
   - dpkg -l | grep tree
+  - dpkg -L tree (설치한 패키지에 포함된 파일 확인)
 
 ## apt-cache ( query the APT cache)
 
@@ -70,3 +71,5 @@
 - dpkg -l (설치된 패키지 확인)
 - dpkg -l | grep tree
 - dpkg -l | wc -l
+
+- sudo dpkg -r rename (Remove an installed package.)

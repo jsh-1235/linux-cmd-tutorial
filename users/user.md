@@ -8,6 +8,7 @@
 
 - useradd [-mcdefP] manager
 - useradd -m manager (create home directory)
+- useradd -m -s /bin/bash manager (login shell of the new account)
 - useradd -m -c comment manager (create home directory)
 - useradd manager -d /home/manager_dir (사용자의 홈 디렉토리 지정)
 - useradd -g users username (사용자 그룹의 UID 지정)
@@ -18,6 +19,7 @@
 - userdel manager
 - userdel -f manager
 - userdel -r manager (사용자 홈디렉토리도 함께 삭제한다.)
+- nl /etc/passwd | grep manager
 - sudo userdel -r manager
 
 ## chage (change user password expiry information)
@@ -40,7 +42,11 @@
 ## usermod (modify a user account)
 
 - 사용자 계정 속성 변경 [-ugGcdefs]
-- sudo usermod -aG sudo manager (add sudoers)
+
+- usermod -aG sudo manager (add sudoers)
+- nl /etc/group | grep sudo
+- nl /etc/group | grep sudo | grep jsh
+
 - usermod -u 1001 manager
 - usermod -c owner jsh (사용자 정보(comment) 수정)
 - usermod -s /bin/bash jsh (로그인 시 사용할 기본 쉘 지정)
@@ -48,5 +54,10 @@
 
 ## chsh (change login shell)
 
+- chsh -s /bin/bash red
+- chsh -s /bin/bash green
+- chsh -s /bin/bash blue
+
 - chsh -s /bin/bash
 - logout
+- echo $SHELL

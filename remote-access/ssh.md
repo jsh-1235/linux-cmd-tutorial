@@ -51,8 +51,8 @@
 - cd ../../mnt/c
 - cd /mnt/c/Products/"Software Devlopment"/Web/DevOps/AWS/Setup/Keys
 - cp aws-bt-key.pem ~/
-- sudo ssh -i "aws-bt-key.pem" ubuntu@ec2-15-164-95-222.ap-northeast-2.compute.amazonaws.com
-- sudo ssh -i "aws-bt-key.pem" ubuntu@ec2-15-164-95-222.ap-northeast-2.compute.amazonaws.com ls -al
+- sudo ssh -i "aws-bt-key.pem" ubuntu@ec2-3-39-226-77.ap-northeast-2.compute.amazonaws.com
+- sudo ssh -i "aws-bt-key.pem" ubuntu@ec2-3-39-226-77.ap-northeast-2.compute.amazonaws.com ls -al
 - exit
 
 ## scp (OpenSSH secure file copy)

@@ -16,9 +16,9 @@
 
 - systemctl -a list-units
 - systemctl -a list-units | grep ssh
-- systemctl status sshd
-- systemctl start sshd
-- systemctl stop sshd
+- systemctl status ssh
+- systemctl start ssh
+- systemctl stop ssh
 
 ## service (apache2)
 

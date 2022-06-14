@@ -71,22 +71,27 @@
 - 각 파일 시스템 디스크 사용량을 표시한다.
 - [전체용량, 사용중인 용량, 사용 가능한 용량, 사용률, Mount Point]
 - df [-ahHt]
-- df -a (모든 파일 시스템 정보 출력)
-- df -i (블록 사용 정보 대신 inode 사용 정보 출력)
-- df -k (단위를 1KB 단위로 표시)
-- df -h (human readable)
-- df -t (지정한 유형의 파일 시스템만 출력)
-- df -x (지정한 유형의 파일 시스템을 제외한 정보 출력)
+- df -a (include pseudo, duplicate, inaccessible file systems)
+- df -i (list inode information instead of block usage)
+- df -k (like --block-size=1K)
+- df -h (human readable: print sizes in powers of 1024)
+- df -H (human readable: print sizes in powers of 1000)
+- df -t (limit listing to file systems of type TYPE)
+- df -x (limit listing to file systems not of type TYPE)
 
 ## du (estimate file space usage, Disk Usage)
 
 - 현재 디렉토리 이하 디스크 사용량을 표시한다.
 - du [-abhsd]
-- du -a (파일까지 출력)
+- du -a (write counts for all files, not just directories)
 - du -b (Byte, ls -l)
-- du -h (용량 단위 표시)
-- du -l (하드 링크된 파일까지 출력)
-- du -s (전체 용량의 합계 출력)
+- du -h (print sizes in human readable format)
+- du -l (count sizes many times if hard linked)
+- du -s (display only a total for each argument)
+
+- du -sh ~
+- du -shL ~ (dereference all symbolic links)
+
 - du /etc | sort -n | tail -n 5
 - du /etc | sort -r | tail -n 5
 - du -sh ~ (홈 디렉토리의 전체 용량 확인)

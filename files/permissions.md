@@ -9,6 +9,7 @@
 
 ## umask (Display or set file mode mask.)
 
+- help umask
 - umask
 - umask -p
 - umask -S (makes the output symbolic; otherwise an octal number is output)
@@ -16,6 +17,19 @@
 - umask 값             : 000 001 002 022
 - File 기본 권한        : 666 665 664 644
 - Directory 기본 권한   : 777 776 775 755
+
+- 디렉토리 권한에서 x가 있으면 빼고 없으면 그대로 파일 권한
+
+- umask 002
+- 777-002(umask)=775 (rwxrwxr-x), 775-111 =644(rw-r--r--)
+- umask -S (u=rwx,g=rwx,o=rx)
+
+- umask 352
+- 777-352(umask)=425 (r---w-r-x), 425-001 =424(r---x-r--)
+- umask -S (u=r,g=w,o=rx)
+
+- umask u=rwx,g=rx,o=rx (022)
+- umask -S
 
 ## Special Permission (특별한 권한)
 
@@ -49,32 +63,31 @@
 
 - [+ 추가, - 삭제, = 지정, s 소유자 또는 그룹만 실행]
 
-- 상대 모드
-  - chmod a+r filename
-  - chmod a-r filename
-  - chmod u+r filename
-  - chmod u-r filename
-  - chmod g+w filename
-  - chmod g-w filename
-  - chmod o+x filename
-  - chmod o-x filename
+- 상대 모드 (기호 모드)
+  - chmod u+r FILE
+  - chmod u-r FILE
+  - chmod g+w FILE
+  - chmod g-w FILE
+  - chmod o+x FILE
+  - chmod o-x FILE
+  - chmod a+r FILE
+  - chmod a-r FILE
 
-  - chmod u+x,g+x,o+x filename
-  - chmod u-x,g-x,o-x filename
+  - chmod u+x,g+x,o+x FILE
+  - chmod u-x,g-x,o-x FILE
 
-- 절대 모드
-  - chmod 777 filename
+- 절대 모드 (숫자 모드)
+  - chmod 777 FILE
 
 ## chown (change file owner and group)
 
-- sudo chown [-R] username filename
-- chown username filename (root permission)
-- chown :usergroup filename
-- chown username:usergroup filename
-- chown -r username:usergroup filename (하위 디렉토리까지 소유자와 그룹 소유자를 변경한다.)
+- sudo chown [-R] OWNER FILE
+- chown OWNER FILE (root permission)
+- chown :GROUP FILE
+- chown OWNER:GROUP FILE
+- chown -r OWNER:GROUP FILE (하위 디렉토리까지 소유자와 그룹 소유자를 변경한다.)
 
 ## chgrp (change group ownership)
 
-- chgrp usergroup filename
-- chgrp -R usergroup filename (하위 디렉토리까지 그룹 소유자를 변경한다.)
-
+- chgrp GROUP FILE
+- chgrp -R GROUP FILE (하위 디렉토리까지 그룹 소유자를 변경한다.)
