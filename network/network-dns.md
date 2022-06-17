@@ -4,7 +4,6 @@
 - 각 네임 서버에는 캐시가 있지만 캐시에 데이터가 없을 경우 최상위 도메인을 관리하는 서버에 문위하면 권위를 지닌 서버까지 도달 할 수 있다.
 - 도메인 이름과 IP 주소는 상호 변환하는 서비스이다.
 
-
 ## domain name structure
 
 - www.example.com. (sub-domain.second-level-domain.top-level-domain.root-domain)
