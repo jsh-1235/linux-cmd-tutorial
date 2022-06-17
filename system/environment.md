@@ -44,7 +44,7 @@
 ## Path
 
 - echo $PATH
-- export PATH=/coding:$PATH
+- export PATH=/home/jsh/shells:$PATH
 - export PATH=~/shells:$PATH
 - echo $PATH | grep shells
 

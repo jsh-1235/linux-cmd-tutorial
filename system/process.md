@@ -114,6 +114,8 @@
 
 ## kill (send a signal to a process)
 
+- kill -l (list the signal names)
+
 - kill %%
 - kill %-
 - kill %n
