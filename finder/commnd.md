@@ -9,12 +9,6 @@
 
 - compgen -a | column
 
-- alias
-- alias rm='rm -i'
-- unalias rm
-
-- \ls (ignore alias)
-
 ## Keyword
 
 - compgen -k | column
@@ -58,81 +52,18 @@
 - type -a tree (display all locations containing an executable named NAME)
 - type -f tree (suppress shell function lookup)
 
-## file (determine file type)
+## which (which  returns  the pathnames of the files (or links) which would be executed in the current environment.)
 
-- file FILE
-- file DIR
+- 환경변수 PATH 에 지정되어 있는 경로만을 검색하여 요청한 명령어가 있는지 알려준다.
+- which date (지정한 명령어의 경로 확인)
+- which -a date
+- /usr/bin/date
 
-## stat (display file or file system status)
+## whereis (locate the binary, source, and manual page files for a command)
 
-- stat FILE
-- stat DIR
-
-- touch -a FILE (change only the access time)
-
-## home directory
-
-- cd ~
-- cd
-
-- echo $HOME
-
-## 지역 변수
-
-- set
-  - Change the value of shell attributes and positional parameters
-  - display the names and values of shell variables.
-
-- PI=3.14
-- echo $PI
-- set | grep PI
-- unset PI
-
-## 전역 변수
-
-- env (run a program in a modified environment)
-- export PI=3.14
-- env | grep PI
-- bash
-  - echo $PI
-
-- set 1 2 3 4
-  - echo $0
-  - echo $1
-  - echo $2
-  - echo $3
-
-- set $(date)
-  - echo $0 (bash)
-  - echo $1 (Fri)
-  - echo $2 (Jun)
-  - echo $3 (17)
-  - echo $4 (18:37:58)
-  - echo $5 (KST)
-  - echo $5 (2022)
-
-## path
-
-- env (run a program in a modified environment)
-
-- echo $PATH
-- export PATH=/home/jsh/shells:$PATH
-- export PATH=~/shells:$PATH
-- echo $PATH | grep shells
-
-- 환경 변수 영구 저장
-  - vim ~/.profile
-  - PATH=~/shells:$PATH
-
-- vim hi.sh
-  - echo 'hi'
-- chmod +x hi.sh
-- ./hi.sh
-
-- export PATH=~/bin:$PATH
-- echo $PATH | grep ~/bin
-- . .profile
-- hi.sh
+- whereis --help
+- whereis [-bms] ls
+- whereis -B /bin /usr/bin -f crontab
 
 ## .profile
 
@@ -190,14 +121,3 @@ echo "Good bye !!!" >> bye
 
 - 일반 사용자
   - jsh:x:1000:1000:admin:/home/jsh:/bin/bash
-
-## history
-
-- type history
-- help history
-
-- history -c (clear)
-- 0>.bash_history (.bash_history 파일 삭제)
-
-- history -a (append history lines from this session to the history file)
-- cat .bash_history

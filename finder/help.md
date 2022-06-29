@@ -7,22 +7,22 @@
 ## man (an interface to the system reference manuals)
 
 - man man
+  - /search (navigation => n : forward, b: backward)
+
 - man ls
 - man ls -f (whatis와 같이 간단한 설명만 출력)
 - man -w ls (whereis)
 - man ls | grep 'sort'
 - man ls | grep 'sort' | grep 'file'
-- /search (navigation => n : forward, b: backward)
 
-## manpath
+## manpath (determine search path for manual pages)
 
-- man 페이지의 위치 경로를 검색하여 표시해 주는 명령어이다.
+- mandb is used to initialize or manually update index database caches.
 - mappath
 
 ## mandb (create or update the manual page index caches)
 
-- Should you be convinced that a man page exists, but you can't access it, then try running
-mandb on Debian/Mint
+- mandb
 
 ## apropos (search the manual page names and descriptions)
 
@@ -32,3 +32,7 @@ mandb on Debian/Mint
 
 - info
 - info date
+
+## whatis (display one-line manual page descriptions)
+
+- whatis ls

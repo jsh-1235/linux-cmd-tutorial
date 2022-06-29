@@ -1,21 +1,5 @@
 # Find
 
-## whatis (display one-line manual page descriptions)
-
-- whatis ls
-
-## which (which  returns  the pathnames of the files (or links) which would be executed in the current environment.)
-
-- 환경변수 PATH 에 지정되어 있는 경로만을 검색하여 요청한 명령어가 있는지 알려준다.
-- which date (지정한 명령어의 경로 확인)
-- which -a date
-- /usr/bin/date
-
-## whereis (locate the binary, source, and manual page files for a command)
-
-- whereis --help
-- whereis [-bms] ls
-- whereis -B /bin /usr/bin -f crontab
 
 ## type (Display information about command type.)
 
@@ -181,4 +165,3 @@
 - diff -u a b (통합 diff[unified diff] 형식으로 출력)
 - diff -q a b (파일 내용 일치 여부만 표시한다.)
 - diff -c a b (두 파일간 다른 부분을 !을 통해 표시해준다.)
-

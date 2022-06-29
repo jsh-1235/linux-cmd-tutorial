@@ -29,25 +29,19 @@
 - !str (str로 시작하는 가장 최근 명령어 실행)
 - !$ (마지막으로 실행한 명령어의 마지막 인수 표시)
 
+## home directory
+
+- cd ~
+- cd
+
+- echo $HOME
+
 ## 명령어 자동 완성
 
 - da [tab] [tab]
 - cd / [tab] [tab]
 - cd ~ [tab] [tab]
 
-## Cursor
-
-- ctrl + ← (한 단어 분량 왼쪽으로 이동)
-- ctrl + → (한 단어 분량 오른쪽으로 이동)
-- ctrl + a (줄 처음으로 이동)
-- ctrl + e (줄 마지막으로 이동)
-
-- ctrl + h (커서 왼쪽쪽으로 한 글자 삭제)
-- ctrl + d (커서 오른쪽으로 한 글자 삭제)
-- ctrl + u (커서 왼쪽쪽으로 문자열 삭제)
-- ctrl + k (커서 오른쪽으로 문자열 삭제)
-
-- ctrl + r (과거에 실행한 명령어 검색)
 
 ## ls (list directory contents)
 
