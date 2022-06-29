@@ -17,12 +17,21 @@
 - whereis [-bms] ls
 - whereis -B /bin /usr/bin -f crontab
 
+## type (Display information about command type.)
+
+- type [-atp] cat
+- type -t cat (지정한 명령어 종류 표시)
+- type ls
+- type -a ls (display all locations containing an executable named NAME)
+
 ## apropos (search the manual page names and descriptions)
 
 - man page 설명에서 지정한 키워드를 포함하고 있는 명령어이다.
 - whatis 데이터베이스에서 포함하는 문자열을 검색한다.
 - whatis 데이터이스가 만들어져 있어야 이 명령어를 쓸 수 있다.
-- apropos Easter
+
+- apropos dir
+- apropos -e dir (search each keyword for exact match)
 
 ## locate (based in db)
 
@@ -173,9 +182,3 @@
 - diff -q a b (파일 내용 일치 여부만 표시한다.)
 - diff -c a b (두 파일간 다른 부분을 !을 통해 표시해준다.)
 
-## type (Display information about command type.)
-
-- type [-atp] cat
-- type -t cat (지정한 명령어 종류 표시)
-- type ls
-- type -a ls

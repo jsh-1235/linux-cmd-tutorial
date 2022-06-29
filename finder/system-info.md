@@ -10,6 +10,7 @@
 - history -c (delete all)
 - history -d 1
 - history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head -10
+- 0>.bash_history
 
 ## timedatectl (timedatectl)
 

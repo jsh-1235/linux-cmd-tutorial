@@ -3,7 +3,7 @@
 ## Insert mode
 
 - shift + i
-- a i o A I O
+- aA/iI/oO
 
 ## Command mode
 
