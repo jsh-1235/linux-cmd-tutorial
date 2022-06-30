@@ -1,6 +1,5 @@
 # Find
 
-
 ## type (Display information about command type.)
 
 - type [-atp] cat

@@ -3,8 +3,9 @@
 ## reboot (halt, poweroff, reboot - Halt, power-off or reboot the machine)
 
 - reboot
-- reboot --halt (Force immediate halt/power-off/reboot)
-- reboot -p (Switch off the machine)
+- reboot --halt (Halt the machine.)
+- reboot -f (Force immediate halt, power-off, or reboot.)
+- reboot -p (Power-off the machine, regardless of which one of the three commands is invoked.)
 
 ## shutdown
 
@@ -20,6 +21,6 @@
 
 ## poweroff
 
-- poweroff
-- poweroff는 하드디스크와 메모리를 동기화 시키지 않고 바로 졸료시키므로 가급적 사용하지 않는게 좋다.
+- poweroff는 하드디스크와 메모리를 동기화 시키지 않고 바로 종료시키므로 가급적 사용하지 않는게 좋다.
 - 사용할 경우 동기화 명령어인 sync 명령으로 동기화를 수행하고 사용하는 것이 좋다.
+- poweroff

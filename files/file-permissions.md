@@ -1,4 +1,3 @@
-
 # Permissions
 
 - 리눅스는 파일이나 디렉토리마다 읽기 권한, 쓰기 권한, 실행 권한을 설정한다.
@@ -39,17 +38,17 @@
   - 적용되면 소유자의 퍼미션 값에 실행권한에 x가 아닌 s로 명시된다.
   - ls -l /usr/bin/passwd
   - -rwsr-xr-x 1 root root 68208 Jul 15  2021 /usr/bin/passwd
-  - touch file
-  - chmod 4755 file
-  - ls -l file
+  - touch File
+  - chmod 4755 File
+  - ls -l File
 
 - SetGID (2000)
   - 파일이 실행되는 동안 그룹 소유주의 권한을 갖게 된다.
   - 실행 파일 뿐만 아니라 디렉토리에도 명시될 수 있다.
   - 적용되면 그룹 소유주의 퍼미션 값에 실행권한에 x가 아닌 s로 명시된다.
-  - touch file
-  - chmod 2755 file
-  - ls -l file
+  - touch File
+  - chmod 2755 File
+  - ls -l File
 
 - sticky bit (1000)
   - 디렉토리에 부여되는 권한으로 적용 시 모든 사용자가 읽고, 쓰고, 삭제가 가능하다.
@@ -91,3 +90,31 @@
 
 - chgrp GROUP FILE
 - chgrp -R GROUP FILE (하위 디렉토리까지 그룹 소유자를 변경한다.)
+
+## chattr (change file attributes on a Linux file system)
+
+- sudo chattr +i FILE (immutable: 파일을 수정할 수 없으며, 오직 관리자만 이 속성을 설정하거나 변경할 수 있다.)
+- lsattr FILE
+- chattr -i FILE
+- rm -f FILE
+
+## lsattr (list file attributes on a Linux second extended file system)
+
+- lsattr FILE
+
+## iconv (convert text from one character encoding to another)
+
+- iconv -l
+- iconv -f 'us-ascii' -t 'UTF-8' FILE > FILE2
+- iconv -c -f 'us-ascii' -t 'UTF-8' FILE > FILE2
+- file -i *
+
+## file (determine file type)
+
+- file *
+
+- file FILE
+- file -i FILE (output MIME type strings [--mime-type and --mime-encoding])
+- file /bin/ls
+- file ~/.profile
+- file /dev/*

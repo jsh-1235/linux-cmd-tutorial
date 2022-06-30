@@ -1,6 +1,6 @@
 # variable
 
-## Local Variable (지역 변수)
+## local variable (지역 변수)
 
 - set
   - Change the value of shell attributes and positional parameters
@@ -11,7 +11,7 @@
 - set | grep PI
 - unset PI
 
-## Global Variable (전역 변수)
+## global variable (전역 변수)
 
 - env
   - run a program in a modified environment
@@ -21,7 +21,7 @@
 - bash
   - echo $PI
 
-## Positional parameters
+## positional parameters
 
 - set 1 2 3 4
   - echo $0
@@ -40,7 +40,7 @@
 
 ## path
 
-- env (run a program in a modified environment)
+- env | grep PATH (run a program in a modified environment)
 
 - echo $PATH
 - export PATH=/home/jsh/shells:$PATH
@@ -50,6 +50,13 @@
 - 환경 변수 영구 저장
   - vim ~/.profile
   - PATH=~/shells:$PATH
+  
+  ```bash
+  # set PATH Custom
+  if [ -d "$HOME/shells" ] ; then
+    PATH="$HOME/shells:$PATH"
+  fi
+  ```
 
 - vim hi.sh
   - echo 'hi'

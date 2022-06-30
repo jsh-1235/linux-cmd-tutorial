@@ -1,47 +1,18 @@
-# Navigation
+# inspection
 
-## pwd (Print Working Directory)
+## file (determine file type)
 
-- pwd (현재 디렉토리의 절대 경로 출력)
+- file FILE
+- file DIR
 
-## cd (Change Directory)
+## stat (display file or file system status)
 
-- cd / (root directory)
-- cd .. (Upper directory)
-- cd /etc (Sub directory: 절대 경로 지정)
-- cd ~ (Home directory)
-- cd (Home directory)
-- cd - (Previous directory)
+- stat FILE
+- stat DIR
 
-## Add directories to stack
+- stat -f FILE (display file system status instead of file status)
 
-- pushd /etc
-- popd
-
-## hash (Remember or display program locations.)
-
-- hash
-
-## Hash/Bang
-
-- !! (바로 직전에 사용한 명령어)
-- !-n (현재 이력 번호에서 n번 전의 명령어 실행)
-- !str (str로 시작하는 가장 최근 명령어 실행)
-- !$ (마지막으로 실행한 명령어의 마지막 인수 표시)
-
-## home directory
-
-- cd ~
-- cd
-
-- echo $HOME
-
-## 명령어 자동 완성
-
-- da [tab] [tab]
-- cd / [tab] [tab]
-- cd ~ [tab] [tab]
-
+- touch -a FILE (change only the access time)
 
 ## ls (list directory contents)
 
@@ -58,37 +29,30 @@
 - ls -A (".", ".."을 제외)
 
 - ls -F (append indicator (one of */=>@|) to entries)
-- ls -alF
+- ls -aF
   - / : Directory
   - @ : Symbolic Link
   - '*' : 실행 가능 파일
 
 - ls -R (하위 경로와 그 안에 있는 모든 파일들을 나열한다.)
 - ls -1R (한 줄에 한 파일씩 나열)
-- ls -lR
 
 - ls -n (소유자를 UID, 소유 그룹을 GID로 표시한다.)
 
-- ls -i (파일의 inode 출력)
+- ls -i (print the index number of each file)
 - ls -li
 
-- ls -s (파일 크기를 KB 단위로 출력)
+- ls -s (print the allocated size of each file, in blocks/)
 - ls -lh (with -l and -s, print sizes like 1K 234M 2G etc.)
 
-- ls -r (정렬 순서를 내림 차순으로 변경)
-- ls -c (최근 변경 시간에 따라 정렬해서 출력)
-- ls -t (파일 정렬을 최근에 사용한 순서대로 출력)
+- ls -r (reverse order while sorting)
+- ls -c (sort by, and show, ctime [time of last modification of file status information])
+- ls -t (sort by modification time, newest first)
 
 - ls -alh (with -l and -s, print sizes like 1K 234M 2G etc.)
 - ls -alS (sort by file size, largest first)
 - ls -alSr
 - ls -alX (sort alphabetically by entry extension)
-
-## ls - alias
-
-- ls
-- \ls (alias 기능 해제)
-- \ls --color=auto
 
 ## dircolors
 

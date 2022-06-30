@@ -57,7 +57,8 @@
 
 ## scp (OpenSSH secure file copy)
 
-- sudo scp -i "aws-bt-key.pem" ubuntu@ec2-15-164-95-222.ap-northeast-2.compute.amazonaws.com:~/scp-file .
+- sudo scp -i "aws-bt-key.pem" ubuntu@ec2-3-39-226-77.ap-northeast-2.compute.amazonaws.com:~/scp-file .
+- sudo scp -i "aws-bt-key.pem" ubuntu@ec2-3-39-226-77.ap-northeast-2.compute.amazonaws.com:/var/log/wtmp .
 
 - sudo scp jsh@192.168.0.72:~/scp-file .
 - cat scp-file

@@ -104,4 +104,4 @@
   - Per user subordinate group IDs.
 
 - /etc/subuid
- - Per user subordinate user IDs.
+  - Per user subordinate user IDs.

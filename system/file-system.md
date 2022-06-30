@@ -103,12 +103,6 @@
 - fallocate -l 1M file-name
 - fallocate -l 1G file-name
 
-## free (Display amount of free and used memory in the system)
-
-- free
-- free [-bkmg]
-- free -h
-
 ## mount
 
 - mount (현재 시스템의 마운트 정보를 확인)

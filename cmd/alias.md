@@ -9,6 +9,7 @@
 - alias
   - ls
   - \ls (ignore alias)
+  - \ls --color=auto
 
 - compgen -a | column
 

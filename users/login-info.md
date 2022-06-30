@@ -4,8 +4,10 @@
 
 - 접속한 사용자 정보 보기
 - w
-- w [-hfs]
-- w -o
+- w -h (do not print header)
+- w -f (show remote hostname field)
+- w -s (short format)
+- w -o (old style output)
 
 ## who (show who is logged on)
 
