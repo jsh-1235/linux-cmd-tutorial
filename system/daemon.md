@@ -1,7 +1,7 @@
 # daemon
 
-- 항상 동작할 프로세스를 데몬이라고 한다.
-- 일부로 끄지 않는 한 Shutdown할 때까지 계속 동작한다.
+- 항상 동작하는 프로세스를 데몬이라고 한다.
+- 일부로 끄지 않는 한 Shutdown 할 때까지 계속 동작한다.
 
 ## sleep (delay for a specified amount of time)
 
@@ -21,13 +21,12 @@
 - */1 * * * * date >> date.log
 - [분 시 일 월 요일 명령어]
 
-## cron sample
+## example
 
 - crontab --help
 - crontab -e (create)
 - crontab -l (check)
 - crontab -r (remove)
-
 
 - sudo service cron start
 - service --status-all | grep cron
