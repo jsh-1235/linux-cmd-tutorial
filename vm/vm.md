@@ -32,7 +32,7 @@
 - ping -c 5 docker-ubuntu.example.com
 - ping -c 5 8.8.8.8
 
-## Booting Mode
+## booting mode settings
 
 - sudo passwd root
 - su - root

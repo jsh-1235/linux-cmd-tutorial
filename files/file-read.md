@@ -14,6 +14,11 @@
 
 - tac FILE
 
+## rev (reverse lines characterwise)
+
+- rev FILE
+- rev FILE1 > FILE2
+
 ## nl (number lines of files)
 
 - nl FILE (cat -b FILE)

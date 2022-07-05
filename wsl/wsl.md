@@ -1,7 +1,11 @@
 # wsl (Windows Subsystem for Linux)
 
+- wsl --help
+- wsl --status
+
 - wsl --install
 - wsl --update
+
 - wsl --list --online
 - wsl --list --verbose
 - wsl -l -v
@@ -10,20 +14,17 @@
 - wsl --set-default Ubuntu-20.04
 - wsl -d Ubuntu-20.04 cat /etc/os-release
 
-- wsl --status
-- wsl --help
-
-## wsl (shutdown or terminate)
-
 - wsl -t ubuntu-20.04 (terminate)
-- lotdown Ubuntu-20.04 (shutdown)
 
 ## Execution
 
 - windows key + r
 - ws
 - wsl -l -v
-- ubuntu2004.exe or bash
+
+- ubuntu2004.exe
+- bash
+- wsl
 
 ## Port Forwarding
 
