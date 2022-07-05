@@ -1,43 +1,42 @@
+
 # wsl (Windows Subsystem for Linux)
+
+- windows key + r
+- ws
+  - wsl -l -v
+  - ubuntu2004.exe
+  - bash
+  - wsl
+
+## wsl command
 
 - wsl --help
 - wsl --status
 
-- wsl --install
+- wsl --list --online
+- wsl --install Ubuntu-20.04
 - wsl --update
 
-- wsl --list --online
-- wsl --list --verbose
-- wsl -l -v
+- wsl --list --verbose (wsl -l -v)
 
 - wsl --set-default-version 2 (wsl 버전으로 2로 변경)
-- wsl --set-default Ubuntu-20.04
+- wsl --set-default Ubuntu-20.04 (wsl 명령에서 실행에 사용할 기본 Linux 배포판 설정)
 - wsl -d Ubuntu-20.04 cat /etc/os-release
 
 - wsl -t ubuntu-20.04 (terminate)
-
-## Execution
-
-- windows key + r
-- ws
-- wsl -l -v
-
-- ubuntu2004.exe
-- bash
-- wsl
-
-## Port Forwarding
-
-- wsl --set-default Ubuntu-20.04 (WSL 명령에서 실행에 사용할 기본 Linux 배포판 설정)
-- bash
-- powershell
-- .\ports_wsl.ps1
 
 ## Linux File Position
 
 - windows key + r
 - \\wsl$\Ubuntu-20.04
 - explorer.exe .
+
+## Port Forwarding
+
+- powershell (관리자 모드)
+  - cd /
+  - dir
+  - .\ports_wsl.ps1
 
 ## Can't open display
 

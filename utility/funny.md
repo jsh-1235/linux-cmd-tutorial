@@ -17,6 +17,8 @@
 ## cmatrix (simulates the display from "The Matrix")
 
 - cmatrix
+- cmatrix -r (rainbow mode)
+- cmatrix -m (lambda mode)
 
 ## aafire
 
@@ -32,4 +34,3 @@
 ## while (display animations aimed to correct users who accidentally enter sl instead of ls.)
 
 - while true; do echo "$(date '+%D %T' | toilet -f term -F border --gay)"; sleep 1; done
-- 
