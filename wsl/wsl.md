@@ -25,7 +25,7 @@
 - wsl -l -v
 - ubuntu2004.exe or bash
 
-## port forwarding
+## Port Forwarding
 
 - wsl --set-default Ubuntu-20.04 (WSL 명령에서 실행에 사용할 기본 Linux 배포판 설정)
 - bash
