@@ -1,5 +1,7 @@
 # Power
 
+- halt, poweroff, reboot - Halt, power-off or reboot the machine
+
 ## reboot (halt, poweroff, reboot - Halt, power-off or reboot the machine)
 
 - reboot
@@ -11,7 +13,7 @@
 
 - shutdown -k now (모든 사용자에게 경고 메시지만 보내고 동작은 수행하지만, 실제로 시스템을 종료하지는 않음)
 - shutdown -h now (시스템 shutdown 후 종료(halt)를 실행)
-- shutdown -P +1 (Poweroff)
+- shutdown -P +1 (poweroff)
 - shutdown -r +1 (1분 후 종료하고 다시 시작한다.)
 - shutdown -r now (reboot)
 - shutdown -f now (Fast Reboot: 재시작 시 fsck(file system check)를 실행하지 않음)
