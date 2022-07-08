@@ -1,4 +1,6 @@
-# vim
+# vi
+
+- Vi IMproved, a programmer's text editor
 
 ## Insert mode
 

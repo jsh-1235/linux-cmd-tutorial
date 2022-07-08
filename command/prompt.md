@@ -1,5 +1,9 @@
 # Prompt
 
+## reset (terminal initialization)
+
+- reset
+
 ## clear (clear the terminal screen)
 
 - clear

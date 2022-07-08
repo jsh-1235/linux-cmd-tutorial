@@ -69,6 +69,7 @@
   - t : 제어 터미널 표시
   - U user : user 사용자가 실행한 프로세서만 표시 (ps -U jsh)
   - l : PRI (Priority)
+  - j : 실제 사용자명, 부모 프로세스 등의 정보를 표시
 - ps -alx (PRI, NI)
 - ps -al
 

@@ -161,3 +161,11 @@
 - mount /dev/sdb1 /media/jsh/usb
 
 - ls -al  /media/jsh/usb
+
+## fsck (check and repair a Linux filesystem)
+
+- fsck
+
+## hdparm (get/set SATA/IDE device parameters)
+
+- hdparm /dev/sda

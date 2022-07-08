@@ -54,6 +54,14 @@
 - echo "hi" > /dev/pts/2
 - echo "hello" > /dev/pts/1
 
+## pwck (verify integrity of password files)
+
+- /etc/passwd 파일의 내용을 분석하여 잘못된 내용이 있는지 검사한다.
+
+## wall (write a message to all users)
+
+- wall hello
+
 ## login file
 
 - /var/log/wtmp

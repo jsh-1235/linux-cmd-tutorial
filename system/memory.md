@@ -26,3 +26,10 @@
 - vmstat -d (disk statistics)
 - vmstat -D (summarize disk statistics)
 - vmstat -p /dev/sda1 (partition specific statistics)
+
+## sync (Synchronize cached writes to persistent storage)
+
+- 메모리상의 데이터들 하드 디스크에 기록한다.
+- 리눅스 운영체제는 시스템의 효율성 향상을 위해서 상대적으로 속도가 느린 하드 디스크로의 접근 횟수를 최소화한다.
+- 발생된 데이터를 하드 디스크에 바로 기록하는 것이 아니라 메모리상에 먼저 기록하게 된다.
+- 이 때 메모리상의 데이터와 하드 디스크상의 파일의 내용을 서로 정합(synchronize)시키는 명령이 sync이다.
